@@ -1,4 +1,6 @@
-<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Путь воина — 70 дней</title><style>
+<!DOCTYPE html>
+
+<html lang="ru"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>Путь самурая — 70 дней</title><style>
 :root{color-scheme:dark;--bg:#10151c;--panel:#1a222d;--panel2:#222d3a;--text:#f0eadf;--muted:#a8b1bb;--gold:#e9b85b;--green:#79c7a0;--line:#33404b}*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at top right,#273344,#10151c 60%);color:var(--text);font:15px/1.5 system-ui,-apple-system,Segoe UI,sans-serif}main{max-width:1100px;margin:auto;padding:24px 16px 60px}h1,h2,h3,p{margin:0}h1{font:700 clamp(30px,5vw,54px)/1.1 Georgia,serif}h2{font:700 24px Georgia,serif}h3{font-size:16px}small,.muted{color:var(--muted)}.hero{padding:26px 28px;border:1px solid #6b5535;border-radius:22px;background:linear-gradient(120deg,#292e35,#1b252e 75%);display:flex;justify-content:space-between;gap:16px;align-items:center}.eyebrow{color:var(--gold);letter-spacing:.17em;font-size:11px;font-weight:800;text-transform:uppercase}.hero p{margin-top:10px;color:var(--muted)}.crest{font-size:64px}.layout{display:grid;grid-template-columns:1.1fr .9fr;gap:16px;margin-top:16px}.panel{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:20px;min-width:0}.panel>h2{margin-bottom:15px}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:16px}.stat{padding:14px;border:1px solid var(--line);background:var(--panel);border-radius:14px}.stat strong{display:block;font-size:25px;color:var(--gold)}.stat span{font-size:12px;color:var(--muted)}.bar{height:10px;background:#303b47;border-radius:20px;overflow:hidden;margin-top:12px}.bar>div{height:100%;background:linear-gradient(90deg,#a97837,#f4c66b);transition:width .2s}.calendar{display:grid;grid-template-columns:repeat(10,minmax(0,1fr));gap:6px;margin-top:15px}.day{border:1px solid var(--line);border-radius:8px;background:var(--panel2);color:var(--text);aspect-ratio:1;cursor:pointer;font-weight:700;min-width:0}.day.selected{outline:2px solid var(--gold)}.day.done{background:#285b4a;border-color:#469e7b}.day.return{background:#6d5432;border-color:#b99053}.day:hover,button:hover{filter:brightness(1.13)}button{font:inherit;cursor:pointer}.pill{padding:9px 14px;border-radius:10px;background:var(--panel2);border:1px solid var(--line);color:var(--text)}.primary{background:var(--gold);border-color:var(--gold);color:#231a0b;font-weight:800}.row{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}.stack{display:grid;gap:10px}.check{display:flex;gap:12px;align-items:center;background:var(--panel2);border:1px solid var(--line);padding:12px;border-radius:12px;cursor:pointer}.check input{accent-color:var(--green);width:19px;height:19px}.check b{display:block}.check small{display:block}.nav{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}.buttons{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}textarea,input[type=number]{width:100%;background:#101923;color:var(--text);border:1px solid #485666;border-radius:10px;padding:11px;font:inherit}textarea{resize:vertical;min-height:88px}.quest{border:1px solid var(--line);background:var(--panel2);padding:13px;border-radius:12px;margin-top:10px}.quest p{color:var(--muted);font-size:13px;margin-top:5px}.quest button{margin-top:10px}.level{display:flex;gap:12px;align-items:center;padding:13px 0;border-bottom:1px solid var(--line)}.level:last-child{border:0}.medal{font-size:26px;width:42px;text-align:center}.level small{display:block}.tag{font-size:11px;color:var(--gold);font-weight:800}.note{padding:12px;background:#25332f;border-left:3px solid var(--green);border-radius:8px;color:#d6f2e1;margin-top:12px}.foot{color:var(--muted);font-size:12px;margin-top:18px}.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}.mini{font-size:12px;color:var(--muted)}@media(max-width:750px){.layout{grid-template-columns:1fr}.hero{padding:20px}.crest{font-size:40px}.calendar{gap:4px}.day{font-size:11px}.stats{gap:6px}.stat{padding:10px}.stat strong{font-size:21px}}@media print{body{background:white;color:black}.panel,.stat{border-color:#bbb}.actions,.buttons,.nav button{display:none}}
 
 .fantasy-map{position:relative;background:linear-gradient(145deg,#172b2b,#233342);border:1px solid #6b6044;border-radius:18px;padding:12px;overflow:hidden}
@@ -105,7 +107,7 @@ body.auth-locked main>.section-tabs{display:none!important}
  .cloud-mini{margin-bottom:5px;min-height:30px}
  .cloud-mini button{padding:5px 9px;min-height:30px;font-size:12px}
  .cloud-mini .cloud-mini-state{font-size:10px}
- .section-tabs{position:fixed;z-index:110;bottom:0;left:0;right:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:5px;margin:0;padding:8px 9px calc(9px + env(safe-area-inset-bottom,0px));background:#fff8f3f7;border-top:1px solid #e8c6cd;box-shadow:0 -6px 24px #b8879b33;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+ .section-tabs{position:fixed;z-index:110;bottom:0;left:0;right:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:5px;margin:0;padding:8px 9px calc(9px + env(safe-area-inset-bottom,0px));background:#fff8f3f7;border-top:1px solid #e8c6cd;box-shadow:0 -6px 24px #b8879b33;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
  .section-tabs button{font-size:11px;line-height:1.15;min-height:42px;padding:7px 3px;border-radius:11px;white-space:normal;overflow-wrap:anywhere}
  .calendar{grid-template-columns:repeat(7,minmax(0,1fr));gap:5px}
  .day{min-height:36px;font-size:12px}
@@ -115,22 +117,240 @@ body.auth-locked main>.section-tabs{display:none!important}
  body.auth-locked .section-tabs{display:none!important}
 }
 @media(max-width:360px){.section-tabs button{font-size:10px}.stat strong{font-size:12px!important}.hero .crest{display:none}}
-</style></head><body class="auth-locked"><main><header class="hero"><div><div class="eyebrow">Личный журнал дисциплины</div><h1>⚔ Путь воина</h1><p>70 дней · 26 октября 2026 — 3 января 2027<br>«Не совершенство. Возвращение к пути».</p></div><div class="crest">🏯</div></header><div class="cloud-mini" id="cloudMini"><button id="cloudMiniToggle" type="button" aria-expanded="false" aria-label="Открыть настройки облака" title="Настройки облака">☁️ Облако</button><span class="cloud-mini-state" id="cloudMiniStatus">✓ Синхронизация включена</span></div><section class="cloud-panel" id="cloudPanel" aria-label="Облачное сохранение"><div class="cloud-controls"><strong>☁️ Облачный прогресс</strong><span id="cloudStatus" class="cloud-msg">Подключаем Supabase…</span></div><div id="cloudAuth" class="cloud-auth"><input id="cloudEmail" type="email" autocomplete="email" placeholder="Email" aria-label="Email"><input id="cloudPassword" type="password" autocomplete="current-password" placeholder="Пароль (не менее 6 символов)" aria-label="Пароль"><button class="pill primary" id="cloudLogin" type="button">Войти</button><button class="pill" id="cloudSignup" type="button">Регистрация</button></div><div id="cloudSigned" class="cloud-signed" hidden><small id="cloudAccount"></small><button class="pill" id="cloudPull" type="button">↻ Загрузить из облака</button><button class="pill" id="cloudPush" type="button">↑ Сохранить в облако</button><button class="pill" id="cloudLogout" type="button">Выйти</button></div><div class="cloud-msg">Перед первым переносом сохрани резервную копию JSON. Не открывай разные учётные записи для одного прогресса.</div></section><div id="fishDecoration" aria-hidden="true">❀ 🐟 ✦ 🪷 ✦ 🐠 ❀</div><nav class="section-tabs" aria-label="Разделы приложения">
-<button data-view="journey" class="active">🗺️ Путешествие</button><button data-view="training">🏃 Тренировки</button><button data-view="quests">🏮 Испытания</button><button data-view="wisdom">📜 Мудрость</button><button data-view="rituals">🌸 Ритуалы</button><button data-view="diary">📝 Дневник</button></nav><div class="sticky-progress" aria-label="Общий прогресс путешествия"><section class="stats"><div class="stat"><strong id="daysDone">0 / 70</strong><span>дней пути</span></div><div class="stat"><strong id="xp">0 XP</strong><span>опыт</span></div><div class="stat"><strong id="rank">Ученик</strong><span>текущее звание</span></div></section></div><div id="view-journey" class="extra-view active"><div class="layout"><div class="panel"><div class="row"><h2>Карта пути</h2><small>🟢 выполнено · 🟠 возвращение</small></div><div class="bar"><div id="progress"></div></div><div id="calendar" class="calendar"></div><div class="note" id="message">Первый шаг начинается с решения продолжать.</div></div><div class="panel"><div class="nav"><button class="pill" id="prev">←</button><div style="text-align:center"><h2 id="dayTitle">День 1</h2><small id="date"></small></div><button class="pill" id="next">→</button></div><div class="stack" id="checks"></div><div style="margin-top:14px"><label for="steps"><b>Шаги за день</b> <small>(необязательно)</small></label><input type="number" min="0" max="100000" id="steps" placeholder="Например, 15000"></div><div style="margin-top:12px"><label for="journal"><b>Запись в дневнике</b></label><textarea id="journal" placeholder="Что получилось? Как я вернулась к пути? Что улучшить завтра?"></textarea></div><div class="buttons"><button class="pill primary" id="complete">✓ День выполнен</button><button class="pill" id="returned">↻ Продолжаю путь</button><button class="pill" id="clearStatus">Снять отметку</button></div><p class="mini" style="margin-top:10px">В день отдыха отмечай выполнение запланированного восстановления. Не нужно тренироваться ежедневно.</p></div></div><div class="layout"><div class="panel"><h2>🗺️ Земли семидесяти дней</h2><p class="map-caption">Твоя фэнтезийная карта. Нажми на точку, чтобы перейти к дню. Открытые земли подсвечиваются по мере прохождения.</p><div id="fantasyMap" class="fantasy-map"></div><div class="map-key"><span>🟡 Текущий день</span><span>🟢 Пройденный</span><span>⚪ Впереди</span></div></div><div class="panel"><h2>✨ Послание дня</h2><div id="affirmation" class="affirmation"></div><div class="buttons"><button class="pill" id="copyAffirmation">Копировать послание</button><button class="pill" id="editAffirmation">Изменить</button><button class="pill" id="resetAffirmation">Вернуть исходное</button></div><div class="daily-card"><h3>🎲 Побочное задание дня <span class="tag">+10 XP</span></h3><p id="dailyQuest"></p><div class="buttons"><button class="pill" id="dailyQuestDone">Выполнить задание</button><button class="pill" id="editDailyQuest">Изменить задание</button><button class="pill" id="resetDailyQuest">Вернуть исходное</button></div></div><p class="mini" style="margin-top:12px">Дополнительные задания необязательны: они помогают сделать путешествие интереснее, но не определяют твою ценность и не требуют перегрузок.</p></div></div><div class="layout"><div class="panel"><h2>🏆 Уровни и звания</h2><div id="levels"></div><p class="mini" style="margin-top:12px">Звания открываются за количество отмеченных дней, не за идеальные серии. XP начисляется за отмеченные действия и дополнительные задания.</p></div><div class="panel"><h2>🎯 Испытания недели</h2><div id="quests"></div></div></div><div class="layout"><div class="panel"><h2>📜 Совет воина</h2><p class="muted">В конце каждой недели ответь на три вопроса:</p><div class="quest"><b>1. Что помогало мне держать курс?</b></div><div class="quest"><b>2. Что оказалось слишком тяжёлым?</b></div><div class="quest"><b>3. Что я изменю на следующей неделе?</b></div><p class="note">Если день не удался, следующий шаг — не наказание, а возвращение. Никаких компенсирующих тренировок и голодания.</p></div><div class="panel"><h2>🛡 Правила похода</h2><p>🥗 Питание: Гарвардская тарелка, 1800 ккал — ориентир, не жёсткий потолок.</p><p style="margin-top:10px">🏃 Движение: план 3 силовых + 3 беговых в неделю, шаги до 20 000 как гибкая цель. Корректируй нагрузку по восстановлению.</p><p style="margin-top:10px">🌙 Сон: цель 7–9 часов.</p><p style="margin-top:10px">💚 Отдых и восстановление — часть выполнения плана.</p><div class="actions"><button class="pill" id="export">⬇ Сохранить прогресс</button><label class="pill" style="cursor:pointer">⬆ Загрузить прогресс<input type="file" id="import" accept="application/json" style="display:none"></label><button class="pill" id="reset">Сбросить всё</button></div><p class="foot">Данные сохраняются локально в этом браузере. Для надёжности периодически сохраняй резервную копию JSON. Не удаляй файл приложения и резервные копии.</p></div></div></div>
-<div id="view-training" class="extra-view">
-<div class="mystic-head"><h2>🐉 Хроники тренировок</h2><p class="section-subtitle">Записывай силовые, бег, прогулки и другие занятия. Дневник не требует рекордов.</p></div>
-<div class="layout"><div class="panel"><h2>Новая тренировка</h2><div class="field"><label>День пути</label><select id="trainingDay"></select></div><div class="field"><label>Тип тренировки</label><select id="trainingType"><option>Силовая</option><option>Бег</option><option>Ходьба</option><option>Дорожка с уклоном</option><option>Мобилити / растяжка</option><option>Другое</option><option>Восстановление</option></select></div><div class="input-grid"><div class="field"><label>Длительность, мин</label><input id="trainingDuration" type="number" min="0" max="600" placeholder="60"></div><div class="field"><label>Ощущаемая нагрузка, 1–10</label><input id="trainingRpe" type="number" min="1" max="10" placeholder="6"></div></div><div id="strengthBuilder" class="strength-builder"><h3>🏋️ Конструктор силовой тренировки</h3><p class="mini">Восемь упражнений загружаются автоматически. Добавляй подходы и меняй названия.</p><div id="exerciseBuilder"></div><button id="addExercise" class="pill" type="button">＋ Добавить упражнение</button></div><div class="field"><label>Упражнения и подходы (свободный формат)</label><textarea id="trainingExercises" placeholder="Приседания — 3 × 8, 40 кг&#10;Тяга — 3 × 10, 35 кг&#10;Или: бег 45 мин, темп 7:30/км"></textarea></div><div class="field"><label>Самочувствие / заметки</label><textarea id="trainingNotes" placeholder="Как прошло занятие? Как восстановилась?"></textarea></div><div class="buttons"><button id="addTraining" class="pill primary">＋ Сохранить тренировку</button><button id="cancelTrainingEdit" class="pill" style="display:none">Отменить изменения</button></div></div><div class="panel"><h2>Журнал занятий</h2><div id="trainingList"></div></div></div></div>
-<div id="view-quests" class="extra-view">
-<div class="mystic-head"><h2>🏮 Доска испытаний</h2><p class="section-subtitle">Создавай собственные квесты, назначай им награду XP и отмечай выполнение. Награды за заботу о себе столь же ценны, как за активность.</p></div>
-<div class="layout"><div class="panel"><h2>Создать испытание</h2><div class="field"><label>Название</label><input id="customQuestName" type="text" maxlength="100" placeholder="Например, приготовить три новых блюда"></div><div class="field"><label>Описание</label><textarea id="customQuestDesc" placeholder="Что именно нужно сделать?"></textarea></div><div class="input-grid"><div class="field"><label>Награда XP</label><input id="customQuestXp" type="number" min="0" max="500" value="30"></div><div class="field"><label>День открытия (1–70)</label><input id="customQuestDay" type="number" min="1" max="70" value="1"></div></div><div class="buttons"><button id="addCustomQuest" class="pill primary">✦ Сохранить испытание</button><button id="cancelQuestEdit" class="pill" style="display:none">Отменить изменения</button></div></div><div class="panel"><h2>Мои испытания</h2><div id="customQuestList"></div></div></div></div>
-<div id="view-wisdom" class="extra-view">
-<div class="mystic-head"><h2>📜 Сад размышлений</h2><p class="section-subtitle">Каждому из 70 дней — свой вопрос. Здесь нет правильных ответов.</p></div>
-<div class="layout"><div class="panel"><div class="row"><h2 id="wisdomTitle">День 1</h2><select id="wisdomDay" style="max-width:180px"></select></div><div class="daily-card"><span class="chip">Вопрос дня</span><div id="wisdomQuestion" class="affirmation"></div></div><div class="field"><label>Мои размышления</label><textarea id="wisdomAnswer" style="min-height:190px" placeholder="Запиши свои мысли, сколько захочется..."></textarea></div><div class="buttons"><button id="saveWisdom" class="pill primary">✧ Сохранить размышление</button><button id="deleteWisdom" class="pill">Удалить размышление</button></div><p class="mini">Ответ сохраняется автоматически при наборе текста.</p></div><div class="panel"><h2>Летопись мудрости</h2><div id="wisdomHistory"></div></div></div></div>
-<div id="view-rituals" class="extra-view">
-<div class="mystic-head"><h2>🌸 Сад ежедневных ритуалов</h2><p class="section-subtitle">Короткие действия для ясности, подготовки и восстановления. Необязательные, но приятные.</p></div>
-<div class="layout"><div class="panel"><div class="row"><h2>Ритуалы дня</h2><select id="ritualDay" style="max-width:150px"></select></div><div id="ritualChecklist" class="stack"></div></div><div class="panel"><h2>Добавить свой ритуал</h2><div class="field"><label>Название</label><input id="ritualName" type="text" maxlength="90" placeholder="Например, чай перед сном"></div><div class="field"><label>Описание</label><input id="ritualDesc" type="text" maxlength="200" placeholder="Небольшой приятный ритуал"></div><div class="buttons"><button id="saveRitual" class="pill primary">Сохранить ритуал</button><button id="cancelRitualEdit" class="pill" style="display:none">Отменить</button></div><h3 style="margin-top:16px">Мои ритуалы</h3><div id="ritualEditorList"></div></div><div class="panel"><h2>Тихое наставление</h2><div class="affirmation">«Не нужно побеждать каждый день. Достаточно не терять направление».</div><p class="muted">Ритуалы не дают штрафов за пропуск. Выбирай только те, которые помогают жить, а не увеличивают список обязанностей.</p><div class="flowerline">❀ ✦ 🪷 ✦ ❀</div></div></div></div>
-<div id="view-diary" class="extra-view"><div class="mystic-head"><h2>📝 Дневник путешественницы</h2><p class="section-subtitle">Свободные записи о любом событии, мысли или впечатлении. Можно редактировать и удалять.</p></div><div class="layout"><div class="panel"><h2>Новая запись</h2><div class="field"><label>День путешествия</label><select id="diaryDay"></select></div><div class="field"><label>Заголовок</label><input id="diaryTitle" type="text" maxlength="120" placeholder="Мой день"></div><div class="field"><label>Запись</label><textarea id="diaryBody" style="min-height:200px" placeholder="О чём хочется рассказать сегодня?"></textarea></div><div class="buttons"><button class="pill primary" id="saveDiary">Сохранить запись</button><button class="pill" id="cancelDiary" style="display:none">Отменить изменения</button></div></div><div class="panel"><h2>Мои записи</h2><div id="diaryList"></div></div></div></div>
-</main><div id="cloudBackdrop" class="cloud-backdrop" aria-hidden="true"></div><script src="https://telegram.org/js/telegram-web-app.js"></script><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script><script>
+
+/* Weight tracker */
+input[type=date]{background:#fffdf9;color:#573a50;border:1px solid #ddb8c6;border-radius:10px;padding:10px;font:inherit;width:100%;min-width:0;color-scheme:light}
+.weight-chart{margin-top:14px;min-height:245px;overflow:hidden;background:linear-gradient(180deg,#fff9f5,#fff1ed);border:1px solid #efd4d6;border-radius:14px;padding:9px}
+.weight-chart svg{width:100%;height:auto;display:block}.weight-chart .axis{font:12px system-ui,sans-serif;fill:#8e7281}.weight-history-item{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:10px 0;border-bottom:1px solid #ead4d5}.weight-history-item:last-child{border:0}.weight-history-item button{padding:5px 9px}.weight-stats{grid-template-columns:repeat(3,minmax(0,1fr))}.weight-stats .stat strong{font-size:clamp(16px,3vw,23px)}
+
+/* More navigation destinations */
+@media(max-width:750px){.section-tabs{grid-template-columns:repeat(5,minmax(0,1fr));max-height:165px;overflow-y:auto}.section-tabs button{min-height:40px;font-size:10px}main{padding-bottom:calc(175px + env(safe-area-inset-bottom,0px))}}
+.challenge-map{background:linear-gradient(130deg,#fff0db,#f7dbe7,#d9f1ef);border:1px solid #e4c4cc;border-radius:18px;padding:15px;overflow:hidden}.challenge-track{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;position:relative}.challenge-node{position:relative;z-index:1;min-width:0;display:flex;flex-direction:column;align-items:center;gap:4px;border:1px solid #d8b6c7;border-radius:17px;padding:12px 6px;background:#fffaf3dd;color:#73465e;box-shadow:0 4px 13px #b8879b2b}.challenge-node .challenge-symbol{font-size:29px;line-height:1.3}.challenge-node.major{background:#ffe5c7;border:2px solid #c99163;box-shadow:0 5px 18px #c9916355}.challenge-node.major .challenge-symbol{font-size:49px}.challenge-node.cleared{background:#cdece0;border-color:#6aafa8}.challenge-node b{font-size:12px;line-height:1.2;overflow-wrap:anywhere}.challenge-node small{font-size:10px;color:#916e81}@media(max-width:650px){.challenge-track{grid-template-columns:repeat(2,minmax(0,1fr))}.challenge-node.major .challenge-symbol{font-size:42px}}
+
+/* Sakura edition — clean mobile navigation and progressive disclosure */
+@media(max-width:750px){
+ .section-tabs{display:flex;grid-template-columns:none;overflow-x:auto;overflow-y:hidden;max-height:none;scroll-snap-type:x proximity;scrollbar-width:none;padding:8px 10px calc(10px + env(safe-area-inset-bottom,0px))}
+ .section-tabs::-webkit-scrollbar{display:none}
+ .section-tabs button{flex:0 0 auto;min-width:100px;scroll-snap-align:start;padding:9px 12px;font-size:11px}
+ main{padding-bottom:calc(94px + env(safe-area-inset-bottom,0px))}
+}
+.journey-days{display:block;margin-top:17px}
+.journey-days .mystic-head{margin-bottom:12px}
+.training-form-panel[hidden]{display:none!important}
+.training-layout{grid-template-columns:1fr}
+.training-form-panel:not([hidden]){max-width:100%}
+.wisdom-prompt{color:#9b6281;font-style:italic;border-left:3px solid #dca3b8;padding-left:10px}
+.dojo-hero{display:flex;justify-content:space-between;align-items:center;gap:15px;margin:15px 0;padding:25px;border:1px solid #dfb7c4;border-radius:22px;background:linear-gradient(125deg,#f7d4e1,#fff0d6 62%,#d8eff0);box-shadow:0 8px 25px #ac6d8522}
+.dojo-hero h2{font-size:clamp(24px,4vw,35px);margin:6px 0 8px}.dojo-hero p{color:#805e70;max-width:560px}.dojo-mark{font-size:60px}
+.dojo-practices{display:grid;gap:10px;margin-top:12px}
+.dojo-practice{border:1px solid #e9cbd3;background:#fff3ef;border-radius:14px;padding:12px}
+.dojo-practice.done{border-color:#85c2ac;background:#eaf7ef}
+.dojo-practice summary{cursor:pointer;display:flex;gap:10px;align-items:center;list-style:none}
+.dojo-practice summary::-webkit-details-marker{display:none}
+.dojo-practice .practice-icon{font-size:26px}.dojo-practice .practice-text{flex:1}
+.dojo-practice .practice-text small{display:block;color:#927786}
+.dojo-practice .practice-body{margin:12px 0 4px;padding:10px;border-radius:10px;background:#fffaf5}
+.dojo-practice button{margin-top:9px}
+.dojo-tree{display:grid;place-items:center;min-height:245px;border-radius:18px;background:radial-gradient(ellipse at bottom,#d7e8d0,#fff3ed 70%);margin:12px 0}
+.dojo-tree svg{max-width:330px;width:100%;height:auto}
+.dojo-vow{display:flex;align-items:center;gap:9px;margin-top:9px;padding:10px;border:1px solid #e8cbd0;border-radius:12px;background:#fff5f0}
+.dojo-vow span{flex:1}.dojo-vow button{padding:6px 9px}
+.dojo-skill{margin:12px 0}.dojo-skill .row{margin-bottom:5px}
+.dojo-skill .bar{margin-top:0}
+.legacy-rituals{margin-top:16px}.legacy-rituals>summary{cursor:pointer;font-weight:700}
+@media(max-width:600px){.dojo-hero{padding:18px}.dojo-mark{font-size:40px}}
+
+/* === NIGHT LANTERN EDITION: navy, turquoise, coral, gold === */
+:root{--bg:#081827;--panel:#102738;--panel2:#173246;--text:#f8ebd8;--muted:#b3c8ce;--gold:#f4c982;--green:#77d1b2;--line:#3a5965;color-scheme:dark}
+html{background:#081827}
+body{background:#081827 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNDQwIiBoZWlnaHQ9IjExMDAiIHZpZXdCb3g9IjAgMCAxNDQwIDExMDAiPgo8ZGVmcz48cmFkaWFsR3JhZGllbnQgaWQ9ImEiPjxzdG9wIHN0b3AtY29sb3I9IiMxYzVjNmEiIHN0b3Atb3BhY2l0eT0iLjU1Ii8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMDcxNjIyIiBzdG9wLW9wYWNpdHk9IjAiLz48L3JhZGlhbEdyYWRpZW50PjxyYWRpYWxHcmFkaWVudCBpZD0iYiI+PHN0b3Agc3RvcC1jb2xvcj0iI2EzNDI3OSIgc3RvcC1vcGFjaXR5PSIuMzUiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMwNzE2MjIiIHN0b3Atb3BhY2l0eT0iMCIvPjwvcmFkaWFsR3JhZGllbnQ+PC9kZWZzPgo8cmVjdCB3aWR0aD0iMTQ0MCIgaGVpZ2h0PSIxMTAwIiBmaWxsPSIjMDkxODI3Ii8+PGVsbGlwc2UgY3g9IjEwMDAiIGN5PSIyMzAiIHJ4PSI3NDAiIHJ5PSI1MDAiIGZpbGw9InVybCgjYSkiLz48ZWxsaXBzZSBjeD0iMTkwIiBjeT0iODIwIiByeD0iNjUwIiByeT0iNDYwIiBmaWxsPSJ1cmwoI2IpIi8+CjxnIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2JmYTc3OSIgc3Ryb2tlLXdpZHRoPSIxLjQiIG9wYWNpdHk9Ii4xMyI+PHBhdGggZD0iTS0xMDAgMzAwIFEzODAgLTcwIDgyMCAxOTAgVDE1NjAgMzAiLz48cGF0aCBkPSJNLTYwIDMzNSBRMzgwIC0zMCA4MjAgMjE1IFQxNTYwIDYwIi8+PHBhdGggZD0iTS03MCA4NTAgUTM5MCA1NzAgOTAwIDg0MCBUMTU0MCA2MjAiLz48L2c+CjxnIGZpbGw9IiNmNWRiOWUiIG9wYWNpdHk9Ii43Ij48Y2lyY2xlIGN4PSI4MCIgY3k9IjEwMCIgcj0iMiIvPjxjaXJjbGUgY3g9IjMxMCIgY3k9IjIxMCIgcj0iMS41Ii8+PGNpcmNsZSBjeD0iNDgwIiBjeT0iODUiIHI9IjIiLz48Y2lyY2xlIGN4PSI2ODAiIGN5PSIyNjAiIHI9IjEuMyIvPjxjaXJjbGUgY3g9Ijg0MCIgY3k9IjY1IiByPSIyIi8+PGNpcmNsZSBjeD0iMTE4MCIgY3k9IjE0MCIgcj0iMS41Ii8+PGNpcmNsZSBjeD0iMTMzMCIgY3k9IjMzMCIgcj0iMiIvPjxjaXJjbGUgY3g9IjIyMCIgY3k9IjU3MCIgcj0iMS41Ii8+PGNpcmNsZSBjeD0iMTEwMCIgY3k9IjY5MCIgcj0iMiIvPjxjaXJjbGUgY3g9IjEyNzAiIGN5PSI5MjAiIHI9IjEuNSIvPjwvZz48L3N2Zz4=") center top / 1440px auto repeat-y;color:var(--text)}
+h1,h2,h3{color:#ffddab}small,.muted,.mini,.foot{color:#b3c8ce}
+main{max-width:1200px}
+.hero{min-height:210px;background:linear-gradient(110deg,#102c3de8,#17384ddc 55%,#392d48bb);border:1px solid #bc876b;border-radius:24px;box-shadow:0 15px 45px #020e1888;position:relative}
+.hero:before{content:"✦   ✧    ✦";color:#f6d6a1;opacity:.7;right:240px;top:20px;letter-spacing:20px}
+.hero h1{color:#ffe0a4;text-shadow:0 2px 16px #ef927844}
+.hero p{color:#c9d5d3}.eyebrow,.tag{color:#f4bd81}
+.hero-art{width:clamp(145px,23vw,235px);flex:none;align-self:end;margin:-20px -8px -25px 0}
+.hero-art svg{width:100%;display:block}
+.panel,.stat,.cloud-panel{background:linear-gradient(145deg,#11293bea,#142c3ceb);border:1px solid #3b5a67;box-shadow:0 7px 25px #020c1880;color:#f7ecde}
+.panel>h2{color:#ffdb9c}
+.mystic-head,.dojo-hero{background:linear-gradient(110deg,#153449,#26334c 68%,#44334c);border:1px solid #856d78;box-shadow:0 7px 28px #020e184f}
+.mystic-head h2,.dojo-hero h2{color:#ffda9c}
+.section-subtitle,.dojo-hero p{color:#bfd1d2}
+.section-tabs button{background:#142d40;color:#ead5c4;border-color:#4d6670}
+.section-tabs button.active{background:linear-gradient(120deg,#d66c76,#f0aa72);border-color:#f8c08b;color:#1d2230;box-shadow:0 0 16px #e77b7b55}
+.pill,.cloud-mini button{background:#1c394c;color:#f7e8d8;border-color:#54707a}
+.pill.primary,.primary{background:linear-gradient(120deg,#f5b77d,#ef7f8c);border-color:#ffcd91;color:#242233}
+.check,.quest,.quest-row,.daily-card,.training-entry,.exercise-box,.strength-builder,.dojo-practice,.dojo-vow,.weight-history-item{background:#193449;color:#f7ebdd;border-color:#456475}
+.check small,.quest p,.daily-card p,.training-entry .muted,.dojo-practice .practice-text small{color:#b6cbd1}
+input[type=number],input[type=text],input[type=date],input[type=email],input[type=password],textarea,select,.cloud-panel input{background:#0d2232;color:#f7eada;border:1px solid #55717a;color-scheme:dark}
+input::placeholder,textarea::placeholder{color:#91aab3}
+.field label{color:#f3cb9d}
+.day{background:#153448;color:#e7ded1;border-color:#486475}
+.day.done{background:#246e66;border-color:#81cbb3;color:#fff}
+.day.return{background:#86623b;border-color:#f1bb73;color:#fff}
+.day.selected{outline:2px solid #f4ad7e;box-shadow:0 0 13px #ef9e7188}
+.bar{background:#254357}.bar>div{background:linear-gradient(90deg,#5ac9bb,#f4c77b,#ef8a98)}
+.note{background:#173f40;color:#d7eee2;border-color:#73c9b4}
+.affirmation{color:#ffd3ad}
+.fantasy-map,.challenge-map{border-color:#c28b70;box-shadow:inset 0 0 40px #061a2870}
+.fantasy-map{background:linear-gradient(145deg,#102e48,#2b3c60 65%,#5a3856)!important}
+.map-caption,.map-key{color:#c5d3d2}.map-label{fill:#f9e1b2}
+.sticky-progress{background:linear-gradient(180deg,#081827f7 70%,#08182700);backdrop-filter:blur(12px)}
+.sticky-progress .stat{background:linear-gradient(130deg,#1b3c4b,#263447);border-color:#536b70}
+.sticky-progress .stat strong{color:#ffd095}
+.sticky-progress .stat span{color:#c2d2d2}
+.cloud-panel{background:#102839;color:#f5e6d5}.cloud-panel .cloud-msg{color:#bed0d3}
+.cloud-mini .cloud-mini-state{color:#89d3bb}
+body.auth-locked #cloudPanel{background:linear-gradient(140deg,#12364b,#1c2c43)}
+.dojo-tree{background:radial-gradient(ellipse at bottom,#31564d,#142d3c 75%)}
+.dojo-practice.done{background:#214e4a;border-color:#71bfa6}
+.dojo-practice .practice-body{background:#102737}
+.dojo-skill .bar{background:#2a4557}
+.weight-chart{background:#10293c;border-color:#456475}
+.weight-chart .axis{fill:#c5d3d2}
+.chip{background:#3a4457;color:#ffd2b2}
+.legacy-rituals{background:#11293b}
+/* Deliberately calm surfaces; warm accents and art are concentrated in header and maps. */
+@media(max-width:750px){
+ .hero{min-height:160px;padding:17px 15px}
+ .hero-art{width:125px;margin:-10px -10px -16px -10px}
+ .hero h1{font-size:clamp(24px,6vw,33px)}
+ .section-tabs{background:#091d2af5;border-top:1px solid #4e6470}
+ .sticky-progress{background:linear-gradient(180deg,#081827fb 80%,#08182700)}
+}
+
+/* Compact, consistent vNext interface */
+[hidden],.legacy-hidden{display:none!important}
+.section-title-row{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.section-title-row h2{margin:0}
+.icon-btn{display:inline-grid;place-items:center;flex:none;width:31px;height:31px;min-width:31px;border-radius:9px;background:#193b4d;border:1px solid #55747b;color:#f8dfb2;font-size:17px;line-height:1;cursor:pointer}
+.icon-btn:hover{background:#30566b}
+.plus-btn{width:37px;height:37px;font-size:25px;background:linear-gradient(140deg,#244d61,#3a3c58);border-color:#a78178;color:#ffdf9f}
+.compact-entry-head{display:flex;align-items:center;gap:10px;min-width:0}
+.compact-entry-head b{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}
+.compact-spacer{flex:1}
+.compact-details{margin-top:8px;border-top:1px solid #355367;padding-top:7px}
+.compact-details summary{cursor:pointer;color:#bed4d7;font-size:13px;list-style:none}
+.compact-details summary::-webkit-details-marker{display:none}
+.compact-details summary em{color:#eeb9c6}
+.entry-body{padding:12px 2px 4px;white-space:pre-wrap;overflow-wrap:anywhere;color:#f5e7d9}
+.entry-body p{white-space:pre-wrap}
+.training-layout{display:flex;flex-direction:column;gap:14px}
+.training-layout>.panel{width:100%}
+.journey-days{margin-top:8px;margin-bottom:18px}
+.daily-ribbons{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}
+.daily-ribbon{padding:12px 16px;border-radius:13px;border:1px solid #54776e;min-width:0}
+.daily-ribbon span{display:block;font-size:12px;font-weight:800;letter-spacing:.03em;margin-bottom:5px}
+.daily-ribbon p{font-size:14px;margin:0}
+.daily-ribbon-green{background:linear-gradient(110deg,#173d3c,#1c4a4b);color:#d9f4df}
+.daily-ribbon-green span{color:#9ee1b8}
+.daily-ribbon-pink{background:linear-gradient(110deg,#49334c,#523950);border-color:#8a6179;color:#ffe2e9}
+.daily-ribbon-pink span{color:#f3b0c8}
+#view-journey>.layout{display:block}
+#view-journey>.layout>.panel{width:100%}
+#view-journey .fantasy-map{max-width:100%}
+.challenge-map{background:linear-gradient(140deg,#10283d,#1a354a 55%,#28334c)!important;border:1px solid #5d7583}
+.challenge-track{background:transparent!important}
+.challenge-node{position:relative;background:#1b3b4e!important;color:#ffe8d4!important;border-color:#527484!important}
+.challenge-node b,.challenge-node small{color:inherit!important}
+.challenge-reward{position:absolute;right:6px;top:5px;padding:3px 6px;border-radius:8px;background:#573c50;color:#ffd49c;font-size:10px;font-weight:800}
+.challenge-node.major .challenge-reward{background:#795044}
+.dojo-day-controls{display:flex;align-items:center;gap:8px}
+.dojo-day-controls select{width:auto;max-width:130px;padding:6px;font-size:13px}
+.global-day{display:flex;align-items:center;justify-content:flex-end;gap:7px;margin-top:4px;font-size:12px;color:#f1c998}
+.global-day select{width:auto;max-width:110px;padding:4px 8px;font-size:12px}
+#view-weight>.panel{margin-top:12px}
+#view-weight>.layout{display:flex;flex-direction:column}
+#view-weight>.layout>.panel{width:100%}
+#cloudMini{margin-top:25px;opacity:.6;justify-content:flex-end}
+#cloudMini:hover{opacity:1}
+@media(max-width:700px){
+.daily-ribbons{grid-template-columns:1fr}
+.compact-entry-head{gap:6px}
+.compact-entry-head .chip{font-size:11px;padding:4px 6px}
+.icon-btn{width:29px;height:29px;min-width:29px}
+.global-day{margin-top:5px}
+}
+
+.challenge-node.major{background:#29455b!important;border:2px solid #c68e70!important}
+.challenge-node.cleared{background:#22564f!important;border-color:#72bfa5!important}
+.challenge-node.major.cleared{background:#275b55!important}
+.challenge-node{padding-top:26px!important}
+#view-weight .weight-stats{margin-top:14px}
+#view-journey .daily-ribbons{margin-bottom:14px}
+
+/* 4-button navigation + discreet secondary menu */
+.section-tabs{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:8px!important;overflow:visible!important;max-height:none!important}
+.section-tabs button{min-width:0!important;flex:1 1 auto!important}
+.more-nav-sheet{position:fixed;z-index:115;right:14px;bottom:85px;width:min(370px,calc(100vw - 28px));max-height:70vh;overflow:auto;background:#10293b;border:1px solid #a27b73;border-radius:18px;padding:16px;box-shadow:0 20px 55px #020c18bb}
+.more-nav-heading{display:flex;align-items:center;justify-content:space-between;color:#ffe1ac;margin-bottom:12px}
+.more-nav-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+.more-nav-grid button{background:#1a394d;border:1px solid #486a78;border-radius:11px;padding:13px 8px;color:#ffe9d4;font:inherit;cursor:pointer}
+.more-nav-grid button:hover{background:#2a5064}
+.more-nav-sheet[hidden]{display:none!important}
+.sakura-cat{filter:drop-shadow(0 2px 3px #030f1c)}
+.sakura-branch{opacity:.9}
+@media(max-width:750px){.section-tabs{padding:8px 8px calc(8px + env(safe-area-inset-bottom,0px))!important}.section-tabs button{font-size:11px!important;padding:9px 3px!important}.more-nav-sheet{bottom:calc(76px + env(safe-area-inset-bottom,0px))}}
+</style></head><body class="auth-locked"><main><header class="hero"><div><div class="eyebrow">Личный журнал дисциплины</div><h1>⚔ Путь самурая</h1><p>70 дней · 26 октября 2026 — 3 января 2027<br/>«Не совершенство. Возвращение к пути».</p></div><div aria-hidden="true" class="hero-art"><svg viewbox="0 0 240 190" xmlns="http://www.w3.org/2000/svg">
+<defs><radialgradient id="lanternLight"><stop stop-color="#ffcf79" stop-opacity=".8"></stop><stop offset="1" stop-color="#ffcf79" stop-opacity="0"></stop></radialgradient><lineargradient id="lanternBody" x1="0" x2="1"><stop stop-color="#dc635e"></stop><stop offset=".5" stop-color="#ffd08a"></stop><stop offset="1" stop-color="#e77e66"></stop></lineargradient></defs>
+<circle cx="156" cy="60" fill="url(#lanternLight)" r="78"></circle>
+<path d="M158 0v21" stroke="#eac48a" stroke-width="2"></path><path d="M138 26q20-13 40 0l6 15v51q-26 19-51 0V41z" fill="url(#lanternBody)" stroke="#ffdb9e" stroke-width="2"></path>
+<path d="M143 30q-10 32 0 64m26-64q10 32 0 64M136 54h45M136 76h45" fill="none" opacity=".8" stroke="#a84d50" stroke-width="2"></path>
+<path d="M153 101v12m-5 0 5 8 5-8" fill="none" stroke="#ffd58b" stroke-width="2"></path>
+<path d="M15 170Q60 142 116 166T242 157" fill="none" stroke="#d59b81" stroke-linecap="round" stroke-width="6"></path>
+<g fill="#ef9ab2"><circle cx="26" cy="55" r="3"></circle><circle cx="35" cy="44" r="4"></circle><circle cx="22" cy="36" r="3"></circle><circle cx="211" cy="127" r="3"></circle></g>
+<path d="M0 84Q42 30 86 70" fill="none" opacity=".8" stroke="#6c918e" stroke-width="3"></path><g class="sakura-cat">
+<path d="M41 170 Q37 149 43 134 Q44 121 55 115 L61 127 Q72 121 83 125 L91 114 Q103 135 98 154 Q95 169 84 171 Z" fill="#111723" stroke="#354355" stroke-width="2"></path>
+<path d="M51 168 Q48 141 67 134 Q85 127 92 147 Q98 167 85 172" fill="#182231" stroke="#39465b" stroke-width="1.6"></path>
+<path d="M77 171 Q99 178 114 162 Q125 147 116 140" fill="none" stroke="#121a29" stroke-linecap="round" stroke-width="12"></path>
+<path d="M75 171 Q100 175 114 160" fill="none" opacity=".8" stroke="#39465b" stroke-width="2"></path>
+<path d="M56 129 L56 120 L63 128 M84 128 L90 120 L92 137" fill="#263246" stroke="#47556a" stroke-width="1.5"></path>
+<path d="M53 145 Q64 139 76 145" fill="none" opacity=".8" stroke="#364255" stroke-width="2"></path>
+</g>
+<g class="sakura-branch" fill="none" stroke="#8c6c7c" stroke-width="3"><path d="M0 45 Q32 43 66 68 M31 45 L48 25 M52 56 L77 43"></path></g>
+<g fill="#f7a4bc" stroke="#fbd1ce" stroke-width=".7">
+<circle cx="25" cy="40" r="6"></circle><circle cx="38" cy="30" r="6"></circle><circle cx="49" cy="54" r="6"></circle><circle cx="72" cy="43" r="5"></circle>
+<circle cx="25" cy="40" fill="#ffd5a0" r="2"></circle><circle cx="38" cy="30" fill="#ffd5a0" r="2"></circle><circle cx="49" cy="54" fill="#ffd5a0" r="2"></circle>
+</g></svg></div></header><section aria-label="Облачное сохранение" class="cloud-panel" id="cloudPanel"><div class="cloud-controls"><strong>☁️ Облачный прогресс</strong><span class="cloud-msg" id="cloudStatus">Подключаем Supabase…</span></div><div class="cloud-auth" id="cloudAuth"><input aria-label="Email" autocomplete="email" id="cloudEmail" placeholder="Email" type="email"/><input aria-label="Пароль" autocomplete="current-password" id="cloudPassword" placeholder="Пароль (не менее 6 символов)" type="password"/><button class="pill primary" id="cloudLogin" type="button">Войти</button><button class="pill" id="cloudSignup" type="button">Регистрация</button></div><div class="cloud-signed" hidden="" id="cloudSigned"><small id="cloudAccount"></small><button class="pill" id="cloudPull" type="button">↻ Загрузить из облака</button><button class="pill" id="cloudPush" type="button">↑ Сохранить в облако</button><button class="pill" id="cloudLogout" type="button">Выйти</button></div><div class="cloud-msg">Перед первым переносом сохрани резервную копию JSON. Не открывай разные учётные записи для одного прогресса.</div></section><div aria-hidden="true" id="fishDecoration">❀ 🐟 ✦ 🪷 ✦ 🐠 ❀</div><nav aria-label="Разделы приложения" class="section-tabs">
+<button class="active" data-view="journey">🗺️ Путешествие</button><button data-view="training">🏃 Тренировки</button><button data-view="quests">🏮 Испытания</button><button aria-controls="moreNavSheet" aria-expanded="false" id="moreNavToggle" type="button">☰ Ещё</button></nav><div class="more-nav-sheet" hidden="" id="moreNavSheet">
+<div class="more-nav-heading"><b>Другие разделы</b><button aria-label="Закрыть" class="icon-btn" id="moreNavClose" type="button">✕</button></div>
+<div class="more-nav-grid">
+<button data-open-view="wisdom" type="button">📜 Мудрость</button>
+<button data-open-view="rituals" type="button">🏯 Додзё</button>
+<button data-open-view="diary" type="button">📝 Дневник</button>
+<button data-open-view="weight" type="button">⚖️ Вес</button>
+<button data-open-view="ranks" type="button">🏆 Звания</button>
+<button data-open-view="about" type="button">🛡 О походе</button>
+</div></div><div aria-label="Общий прогресс путешествия" class="sticky-progress"><section class="stats"><div class="stat"><strong id="daysDone">0 / 70</strong><span>дней пути</span></div><div class="stat"><strong id="xp">0 XP</strong><span>опыт</span></div><div class="stat"><strong id="rank">Ученик</strong><span>текущее звание</span></div></section><div class="global-day"><label for="globalDayPicker">День пути</label><select aria-label="Выбрать день путешествия" id="globalDayPicker"></select></div></div><div class="extra-view active" id="view-journey"><section class="journey-days" id="journeyDays"><div class="mystic-head"><h2>📅 Дни путешествия</h2><p class="section-subtitle">Выбери день, отметь сделанное и продолжай путь.</p></div><div class="layout"><div class="panel"><div class="row"><h2>Карта пути</h2><small>🟢 выполнено · 🟠 возвращение</small></div><div class="bar"><div id="progress"></div></div><div class="calendar" id="calendar"></div><div class="note" id="message" style="display:none">Первый шаг начинается с решения продолжать.</div></div><div class="panel"><div class="nav"><button class="pill" id="prev">←</button><div style="text-align:center"><h2 id="dayTitle">День 1</h2><small id="date"></small></div><button class="pill" id="next">→</button></div><div class="stack" id="checks"></div><div style="margin-top:14px"><label for="steps"><b>Шаги за день</b> <small>(необязательно)</small></label><input id="steps" max="100000" min="0" placeholder="Например, 15000" type="number"/></div><div style="margin-top:12px"><label for="journal"><b>Запись в дневнике</b></label><textarea id="journal" placeholder="Что получилось? Как я вернулась к пути? Что улучшить завтра?"></textarea></div><div class="buttons"><button class="pill primary" id="complete">✓ День выполнен</button><button class="pill" id="returned">↻ Продолжаю путь</button><button class="pill" id="clearStatus">Снять отметку</button></div><p class="mini" style="margin-top:10px">В день отдыха отмечай выполнение запланированного восстановления. Не нужно тренироваться ежедневно.</p></div></div><div class="panel legacy-hidden"><h2>✨ Послание дня</h2><div class="affirmation" id="affirmation"></div><div class="buttons"><button class="pill" id="copyAffirmation">Копировать послание</button><button aria-label="Изменить" class="icon-btn" id="editAffirmation" title="Изменить">✎</button><button class="pill" id="resetAffirmation">Вернуть исходное</button></div><div class="daily-card"><h3>🎲 Побочное задание дня <span class="tag">+10 XP</span></h3><p id="dailyQuest"></p><div class="buttons"><button class="pill" id="dailyQuestDone">Выполнить задание</button><button aria-label="Изменить" class="icon-btn" id="editDailyQuest" title="Изменить">✎</button><button class="pill" id="resetDailyQuest">Вернуть исходное</button></div></div><p class="mini" style="margin-top:12px">Дополнительные задания необязательны: они помогают сделать путешествие интереснее, но не определяют твою ценность и не требуют перегрузок.</p></div></section><div class="layout"><div class="panel"><h2>🗺️ Земли семидесяти дней</h2><p class="map-caption">Твоя фэнтезийная карта. Нажми на точку, чтобы перейти к дню. Открытые земли подсвечиваются по мере прохождения.</p><div class="fantasy-map" id="fantasyMap"></div><div class="map-key"><span>🟡 Текущий день</span><span>🟢 Пройденный</span><span>⚪ Впереди</span></div></div></div><div class="daily-ribbons"><div class="daily-ribbon daily-ribbon-green"><span>✦ Послание дня</span><p id="dailyMessageRibbon"></p></div><div class="daily-ribbon daily-ribbon-pink"><span>🎴 Побочное задание</span><p id="dailySideQuestRibbon"></p></div></div><div class="panel legacy-hidden" style="margin-top:14px"><h2>🏮 Испытания на пути</h2><p class="section-subtitle">Ближайшие и активные испытания из Доски испытаний</p><div id="journeyChallenges"></div><button class="pill primary" id="goToChallenges" type="button">Открыть все испытания →</button></div></div><div class="extra-view" id="view-ranks"><div class="panel"><h2>🏆 Уровни и звания</h2><div id="levels"></div><p class="mini" style="margin-top:12px">Звания открываются за количество отмеченных дней, не за идеальные серии. XP начисляется за отмеченные действия и дополнительные задания.</p></div></div><div class="extra-view" id="view-about"><div class="panel"><h2>🛡 Правила похода</h2><p>🥗 Питание: Гарвардская тарелка, 1800 ккал — ориентир, не жёсткий потолок.</p><p style="margin-top:10px">🏃 Движение: план 3 силовых + 3 беговых в неделю, шаги до 20 000 как гибкая цель. Корректируй нагрузку по восстановлению.</p><p style="margin-top:10px">🌙 Сон: цель 7–9 часов.</p><p style="margin-top:10px">💚 Отдых и восстановление — часть выполнения плана.</p><div class="actions"><button class="pill" id="export">⬇ Сохранить прогресс</button><label class="pill" style="cursor:pointer">⬆ Загрузить прогресс<input accept="application/json" id="import" style="display:none" type="file"/></label><button class="pill" id="reset">Сбросить всё</button></div><p class="foot">Данные сохраняются локально в этом браузере. Для надёжности периодически сохраняй резервную копию JSON. Не удаляй файл приложения и резервные копии.</p></div><div class="cloud-mini" id="cloudMini"><button aria-expanded="false" aria-label="Открыть настройки облака" id="cloudMiniToggle" title="Настройки облака" type="button">☁️ Облако</button><span class="cloud-mini-state" id="cloudMiniStatus">✓ Синхронизация включена</span></div></div>
+<div class="extra-view" id="view-training">
+<div class="mystic-head"><div class="row section-title-row"><h2>🐉 Хроники тренировок</h2><button aria-expanded="false" aria-label="Добавить тренировку" class="icon-btn plus-btn" id="trainingPlus" title="Добавить тренировку" type="button">＋</button></div><p class="section-subtitle">Записывай силовые, бег, прогулки и другие занятия. Дневник не требует рекордов.</p></div>
+<div class="buttons" style="margin:0 0 14px"><button aria-expanded="false" class="legacy-hidden" id="trainingFormToggle" type="button">＋ Новая тренировка</button></div><div class="layout training-layout"><div class="panel"><h2>Журнал занятий</h2><div id="trainingList"></div></div><div class="panel training-form-panel" hidden="" id="trainingFormPanel"><h2>Новая тренировка</h2><div class="field"><label>День пути</label><select id="trainingDay"></select></div><div class="field"><label>Тип тренировки</label><select id="trainingType"><option>Силовая</option><option>Бег</option><option>Ходьба</option><option>Дорожка с уклоном</option><option>Мобилити / растяжка</option><option>Другое</option><option>Восстановление</option></select></div><div class="input-grid"><div class="field"><label>Длительность, мин</label><input id="trainingDuration" max="600" min="0" placeholder="60" type="number"/></div><div class="field"><label>Ощущаемая нагрузка, 1–10</label><input id="trainingRpe" max="10" min="1" placeholder="6" type="number"/></div></div><div class="strength-builder" id="strengthBuilder"><h3>🏋️ Конструктор силовой тренировки</h3><p class="mini">Восемь упражнений загружаются автоматически. Добавляй подходы и меняй названия.</p><div id="exerciseBuilder"></div><button class="pill" id="addExercise" type="button">＋ Добавить упражнение</button></div><div class="field"><label>Упражнения и подходы (свободный формат)</label><textarea id="trainingExercises" placeholder="Приседания — 3 × 8, 40 кг
+Тяга — 3 × 10, 35 кг
+Или: бег 45 мин, темп 7:30/км"></textarea></div><div class="field"><label>Самочувствие / заметки</label><textarea id="trainingNotes" placeholder="Как прошло занятие? Как восстановилась?"></textarea></div><div class="buttons"><button class="pill primary" id="addTraining">＋ Сохранить тренировку</button><button class="pill" id="cancelTrainingEdit" style="display:none">Отменить изменения</button></div></div></div></div>
+<div class="extra-view" id="view-quests">
+<div class="panel" style="margin:16px 0"><h2>🗺️ Карта испытаний</h2><p class="section-subtitle">Выбирай символы на карте: крупные — главные испытания пути, маленькие — личные задания.</p><div class="challenge-map" id="challengeMap"></div></div><div class="panel legacy-hidden"><h2>🎯 Испытания недели</h2><div id="quests"></div></div><div class="mystic-head"><div class="row section-title-row"><h2>🏮 Доска испытаний</h2><button aria-expanded="false" aria-label="Создать испытание" class="icon-btn plus-btn" id="questPlus" title="Создать испытание" type="button">＋</button></div><p class="section-subtitle">Создавай собственные квесты, назначай им награду XP и отмечай выполнение. Награды за заботу о себе столь же ценны, как за активность.</p></div>
+<div class="layout"><div class="panel"><h2>Мои испытания</h2><div id="customQuestList"></div></div><div class="panel" hidden="" id="questFormPanel"><h2>Создать испытание</h2><div class="field"><label>Название</label><input id="customQuestName" maxlength="100" placeholder="Например, приготовить три новых блюда" type="text"/></div><div class="field"><label>Описание</label><textarea id="customQuestDesc" placeholder="Что именно нужно сделать?"></textarea></div><div class="input-grid"><div class="field"><label>Награда XP</label><input id="customQuestXp" max="500" min="0" type="number" value="30"/></div><div class="field"><label>День открытия (1–70)</label><input id="customQuestDay" max="70" min="1" type="number" value="1"/></div></div><div class="buttons"><button class="pill primary" id="addCustomQuest">✦ Сохранить испытание</button><button class="pill" id="cancelQuestEdit" style="display:none">Отменить изменения</button></div></div></div></div>
+<div class="extra-view" id="view-wisdom">
+<div class="mystic-head"><div class="row section-title-row"><h2>📜 Сад размышлений</h2><button aria-expanded="false" aria-label="Добавить размышление" class="icon-btn plus-btn" id="wisdomPlus" title="Добавить размышление" type="button">＋</button></div><p class="section-subtitle">Каждому из 70 дней — свой вопрос. Здесь нет правильных ответов.</p></div>
+<div class="layout"><div class="panel"><h2>Летопись мудрости</h2><div id="wisdomHistory"></div></div><div class="panel" hidden="" id="wisdomFormPanel"><div class="row"><h2 id="wisdomTitle">День 1</h2><select id="wisdomDay" style="max-width:180px"></select></div><div class="daily-card"><span class="chip">Вопрос дня</span><div class="affirmation" id="wisdomQuestion"></div></div><div class="field"><label>Мои размышления</label><textarea id="wisdomAnswer" placeholder="Запиши свои мысли, сколько захочется..." style="min-height:190px"></textarea></div><div class="buttons"><button class="pill primary" id="saveWisdom">✧ Сохранить размышление</button><button aria-label="Удалить" class="icon-btn" id="deleteWisdom" title="Удалить">✕</button></div><p class="mini">Ответ сохраняется автоматически при наборе текста.</p></div></div></div>
+<div class="extra-view" id="view-rituals">
+<div class="dojo-hero"><div><div class="eyebrow">道場 · ДОРОГА К МАСТЕРСТВУ</div><h2>🏯 Додзё спокойной силы</h2><p>Здесь ты тренируешь внимание, восстановление и верность собственным решениям — без наказаний за пропуски.</p></div><div class="dojo-mark">🌸</div></div>
+<div class="layout"><div class="panel"><div class="row"><h2>🪷 Практики дня</h2><div class="dojo-day-controls"><label for="dojoDayPicker">День</label><select aria-label="Выбрать день практик" id="dojoDayPicker"></select><small id="dojoPracticeCounter">0 / 3</small></div></div><p class="section-subtitle">Выбери до трёх практик. Нажми на карточку, чтобы увидеть инструкцию.</p><div class="dojo-practices" id="dojoPractices"></div></div>
+<div class="panel"><h2>🌳 Дерево мастерства</h2><div class="dojo-tree" id="dojoTree"></div><div class="muted" id="dojoTreeCaption" style="text-align:center"></div><p class="mini" style="margin-top:10px">Дерево растёт от накопленных дней практики. Пропуски не отнимают достигнутого.</p></div></div>
+<div class="layout"><div class="panel"><div class="row section-title-row"><h2>🎎 Личные обеты</h2><button aria-expanded="false" aria-label="Создать личный обет" class="icon-btn plus-btn" id="vowPlus" title="Создать личный обет" type="button">＋</button></div><p class="section-subtitle">Выбери одно небольшое обязательство на неделю. Не превращай его в наказание.</p><div class="folded-form" hidden="" id="vowFormPanel"><div class="field"><label for="dojoVow">Мой обет</label><input id="dojoVow" maxlength="110" placeholder="Например, готовить одежду на завтра" type="text"/></div><div class="buttons"><button class="pill primary" id="dojoVowAdd" type="button">＋ Создать обет</button></div></div><div id="dojoVows"></div></div><div class="panel"><h2>✨ Что развивается</h2><div id="dojoSkills"></div><p class="mini" style="margin-top:10px">Это игровые показатели практики, а не медицинская или психологическая оценка.</p></div></div>
+<details class="panel legacy-rituals"><summary>🌿 Мои прежние ритуалы и настройки</summary><p class="mini" style="margin-top:10px">Старые записи сохранены. Здесь можно продолжать ими пользоваться.</p>
+<div class="layout"><div class="panel"><div class="row"><h2>Ритуалы дня</h2><select id="ritualDay" style="max-width:150px"></select></div><div class="stack" id="ritualChecklist"></div></div><div class="panel"><h2>Добавить свой ритуал</h2><div class="field"><label>Название</label><input id="ritualName" maxlength="90" placeholder="Например, чай перед сном" type="text"/></div><div class="field"><label>Описание</label><input id="ritualDesc" maxlength="200" placeholder="Небольшой приятный ритуал" type="text"/></div><div class="buttons"><button class="pill primary" id="saveRitual">Сохранить ритуал</button><button class="pill" id="cancelRitualEdit" style="display:none">Отменить</button></div><h3 style="margin-top:16px">Мои ритуалы</h3><div id="ritualEditorList"></div></div><div class="panel"><h2>Тихое наставление</h2><div class="affirmation">«Не нужно побеждать каждый день. Достаточно не терять направление».</div><p class="muted">Ритуалы не дают штрафов за пропуск. Выбирай только те, которые помогают жить, а не увеличивают список обязанностей.</p><div class="flowerline">❀ ✦ 🪷 ✦ ❀</div></div></div></details></div>
+<div class="extra-view" id="view-weight">
+<div class="mystic-head"><div class="row section-title-row"><h2>⚖️ Летопись веса</h2><button aria-expanded="false" aria-label="Добавить измерение" class="icon-btn plus-btn" id="weightPlus" title="Добавить измерение" type="button">＋</button></div><p class="section-subtitle">Записывай измерения и наблюдай за общей тенденцией. Ежедневные колебания — это нормально.</p></div><div class="panel" style="margin-top:16px"><div class="row"><h2>📈 Динамика веса</h2><span class="chip" id="weightCount">0 измерений</span></div><div aria-label="График веса по датам" class="weight-chart" id="weightChart" role="img"></div><p class="mini" style="margin-top:10px">График строится по датам измерений. Изменения воды, питания и цикла могут влиять на вес — ориентируйся на тенденцию за несколько недель.</p><div class="stats weight-stats"><div class="stat"><strong id="weightFirst">—</strong><span>первый замер</span></div><div class="stat"><strong id="weightLatest">—</strong><span>последний</span></div><div class="stat"><strong id="weightChange">—</strong><span>изменение</span></div></div></div>
+<div class="layout"><div class="panel"><h2>История измерений</h2><div id="weightHistory"></div></div><div class="panel" hidden="" id="weightFormPanel">
+<h2>Новое измерение</h2>
+<div class="input-grid"><div class="field"><label for="weightDate">Дата</label><input id="weightDate" type="date"/></div><div class="field"><label for="weightValue">Вес, кг</label><input id="weightValue" max="400" min="20" placeholder="Например, 85.8" step="0.1" type="number"/></div></div>
+<div class="buttons"><button class="pill primary" id="weightSave">＋ Сохранить вес</button></div><p aria-live="polite" class="mini" id="weightMessage" style="margin-top:9px"></p>
+</div></div>
+</div>
+<div class="extra-view" id="view-diary"><div class="mystic-head"><div class="row section-title-row"><h2>📝 Дневник путешественницы</h2><button aria-expanded="false" aria-label="Добавить запись" class="icon-btn plus-btn" id="diaryPlus" title="Добавить запись" type="button">＋</button></div><p class="section-subtitle">Свободные записи о любом событии, мысли или впечатлении. Можно редактировать и удалять.</p></div><div class="layout"><div class="panel"><h2>Мои записи</h2><div id="diaryList"></div></div><div class="panel" hidden="" id="diaryFormPanel"><h2>Новая запись</h2><div class="field"><label>День путешествия</label><select id="diaryDay"></select></div><div class="field"><label>Заголовок</label><input id="diaryTitle" maxlength="120" placeholder="Мой день" type="text"/></div><div class="field"><label>Запись</label><textarea id="diaryBody" placeholder="О чём хочется рассказать сегодня?" style="min-height:200px"></textarea></div><div class="buttons"><button class="pill primary" id="saveDiary">Сохранить запись</button><button class="pill" id="cancelDiary" style="display:none">Отменить изменения</button></div></div></div></div>
+</main><div aria-hidden="true" class="cloud-backdrop" id="cloudBackdrop"></div><script src="https://telegram.org/js/telegram-web-app.js"></script><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script><script>
 (()=>{'use strict';const KEY='warrior70_v1';const START=Date.UTC(2026,9,26);const levels=[{at:0,name:'Ученик',icon:'🌱',desc:'Принять решение и начать'},{at:7,name:'Искатель',icon:'🥾',desc:'Первый рубеж — семь дней'},{at:14,name:'Странник',icon:'🗺️',desc:'Пройти дальше прежней границы'},{at:21,name:'Страж',icon:'🛡️',desc:'Три недели возвращений'},{at:35,name:'Воин',icon:'⚔️',desc:'Половина пути'},{at:49,name:'Наставник',icon:'🏯',desc:'Семь недель последовательности'},{at:63,name:'Мастер стойкости',icon:'🐉',desc:'Девять недель пути'},{at:70,name:'Хранитель пути',icon:'👑',desc:'Все семьдесят дней пройдены'}];const quests=[['Подготовка','Подготовь продукты и форму на следующий день.'],['Испытание восьмого дня','На 8-й день выполни посильный план без попытки вернуть первоначальный энтузиазм.'],['Искусство простоты','Подготовь три быстрых варианта полноценного ужина.'],['Тихая дисциплина','Один день следуй расписанию, не добавляя лишних задач.'],['Половина пути','Запиши три навыка, которые улучшились за 35 дней.'],['Мудрость восстановления','Выдели время для восстановления и не компенсируй отдых.'],['Верность решению','Вспомни сложный день, после которого ты продолжила.'],['Проверка курса','Оцени, хватает ли тебе питания, сна и отдыха.'],['Перед финишем','Составь реалистичный план после 70-го дня.'],['Завершение похода','Напиши письмо себе о том, чему научилась.']];const items=[['food','🥗 Питание','Сбалансированные приёмы пищи, гибкий ориентир калорий'],['movement','🚶 Ходьба','Посильная активность без компенсации'],['training','🏋️ Тренировка / отдых','Выполнен плановый бег, силовая или восстановление'],['sleep','🌙 Сон','Цель — более 7 часов']];let state={days:{},quests:{},selected:1};try{const v=JSON.parse(localStorage.getItem(KEY));if(v&&typeof v==='object'){state={days:v.days||{},quests:v.quests||{},selected:Math.max(1,Math.min(70,Number(v.selected)||1))}}}catch(e){}const el=id=>document.getElementById(id);const entry=n=>state.days[n]||{};const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(state))}catch(e){}scheduleCloudSave()};const marked=()=>Object.values(state.days).filter(x=>x.status==='complete'||x.status==='return').length;const date=n=>new Date(START+(n-1)*86400000).toLocaleDateString('ru-RU',{day:'numeric',month:'long',year:'numeric',timeZone:'UTC'});function xp(){let x=0;Object.values(state.days).forEach(d=>{if(d.status)x+=20;if(d.dailyQuest)x+=10;items.forEach(i=>{if(d[i[0]])x+=5})});Object.values(state.quests).forEach(v=>{if(v)x+=30});return x}function render(){const total=marked(),currentRank=[...levels].reverse().find(l=>total>=l.at);el('daysDone').textContent=total+' / 70';el('xp').textContent=xp()+' XP';el('rank').textContent=currentRank.name;el('progress').style.width=(total/70*100)+'%';el('calendar').innerHTML=Array.from({length:70},(_,i)=>{const n=i+1,d=entry(n);return `<button class="day ${d.status==='complete'?'done':d.status==='return'?'return':''} ${state.selected===n?'selected':''}" data-day="${n}" aria-label="День ${n}, ${date(n)}">${n}</button>`}).join('');el('calendar').querySelectorAll('button').forEach(b=>b.onclick=()=>{state.selected=+b.dataset.day;save();render()});el('dayTitle').textContent='День '+state.selected;el('date').textContent=date(state.selected)+' · неделя '+Math.ceil(state.selected/7);el('prev').disabled=state.selected===1;el('next').disabled=state.selected===70;const d=entry(state.selected);el('checks').innerHTML=items.map(([key,title,desc])=>`<label class="check"><input type="checkbox" data-check="${key}" ${d[key]?'checked':''}><span><b>${title}</b><small>${desc}</small></span></label>`).join('');el('checks').querySelectorAll('input').forEach(c=>c.onchange=()=>update({[c.dataset.check]:c.checked}));el('steps').value=d.steps??'';el('journal').value=d.note??'';el('complete').style.opacity=d.status==='complete'?'1':'.8';el('returned').style.opacity=d.status==='return'?'1':'.8';el('message').textContent=state.selected===8?'⚔ Испытание восьмого дня: продолжи без необходимости чувствовать вдохновение.':total===70?'👑 Путь завершён. Теперь сохрани то, чему научилась.':total>=14?'Ты уже прошла прежний рубеж. Продолжай спокойно и последовательно.':'Путь не требует идеальности. Каждый возврат — часть мастерства.';el('levels').innerHTML=levels.map(l=>`<div class="level"><div class="medal">${total>=l.at?l.icon:'🔒'}</div><div style="flex:1"><b>${l.name}</b><small>${l.desc}</small></div><span class="tag">${total>=l.at?'ОТКРЫТО':l.at+' ДНЕЙ'}</span></div>`).join('');el('quests').innerHTML=quests.map(([title,desc],i)=>`<div class="quest"><div class="row"><b>Неделя ${i+1}: ${title}</b><span class="tag">+30 XP</span></div><p>${desc}</p><button class="pill ${state.quests[i]?'primary':''}" data-quest="${i}">${state.quests[i]?'✓ Выполнено':'Отметить выполнение'}</button></div>`).join('');el('quests').querySelectorAll('button').forEach(b=>b.onclick=()=>{const k=b.dataset.quest;state.quests[k]=!state.quests[k];save();render()});renderExtras()}function update(p){state.days[state.selected]={...entry(state.selected),...p};save();render()}el('prev').onclick=()=>{state.selected--;save();render()};el('next').onclick=()=>{state.selected++;save();render()};el('complete').onclick=()=>update({status:'complete'});el('returned').onclick=()=>update({status:'return'});el('clearStatus').onclick=()=>update({status:null});el('steps').onchange=e=>update({steps:e.target.value===''?null:Math.max(0,Number(e.target.value))});el('journal').oninput=e=>{state.days[state.selected]={...entry(state.selected),note:e.target.value};save()};el('export').onclick=()=>{const blob=new Blob([JSON.stringify({app:'warrior70',version:1,exported:new Date().toISOString(),...state},null,2)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='put_voina_progress.json';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),2000)};el('import').onchange=async e=>{const file=e.target.files[0];if(!file)return;try{const d=JSON.parse(await file.text());if(d.app!=='warrior70'||!d.days||typeof d.days!=='object')throw Error('Неверный формат');if(confirm('Заменить текущий прогресс данными из файла?')){state={days:d.days,quests:d.quests||{},selected:Math.max(1,Math.min(70,Number(d.selected)||1))};save();render()}}catch(err){alert('Не удалось загрузить файл прогресса.')}e.target.value=''};el('reset').onclick=()=>{if(confirm('Удалить весь прогресс? Рекомендуем сначала сохранить резервную копию.')){state={days:{},quests:{},selected:1};save();render()}};
 const affirmations=[
 'Мой путь складывается из маленьких действий.',
@@ -257,7 +477,7 @@ el('dailyQuestDone').onclick=()=>update({dailyQuest:!entry(state.selected).daily
 el('copyAffirmation').onclick=()=>{const value=el('affirmation').textContent;if(navigator.clipboard?.writeText)navigator.clipboard.writeText(value).then(()=>alert('Послание скопировано')).catch(()=>prompt('Скопируй послание:',value));else prompt('Скопируй послание:',value)};
 
 const EXTRA_KEY='warrior70_fantasy_v2';
-let extra={trainings:[],customQuests:[],answers:{},rituals:{},customRituals:[],diary:[],dailyOverrides:{}};
+let extra={trainings:[],customQuests:[],answers:{},rituals:{},customRituals:[],diary:[],dailyOverrides:{},weights:[],dojo:{practices:{},vows:[]}};
 try{const loaded=JSON.parse(localStorage.getItem(EXTRA_KEY));if(loaded&&typeof loaded==='object')extra={...extra,...loaded}}catch(e){}
 function saveExtra(){try{localStorage.setItem(EXTRA_KEY,JSON.stringify(extra))}catch(e){}scheduleCloudSave()}
 const escapeHtml=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -343,19 +563,67 @@ el('customQuestList').querySelectorAll('[data-quest-delete]').forEach(b=>b.oncli
 }
 function refreshXp(){const bonus=extra.customQuests.reduce((s,q)=>s+(q.done?q.xp:0),0);el('xp').textContent=(xp()+bonus)+' XP'}
 el('addCustomQuest').onclick=()=>{const name=el('customQuestName').value.trim();if(!name)return alert('Напиши название испытания');const q={id:'q'+Date.now()+Math.random().toString(36).slice(2),name,desc:el('customQuestDesc').value.trim(),xp:Math.max(0,Math.min(500,Number(el('customQuestXp').value)||0)),day:Math.max(1,Math.min(70,Number(el('customQuestDay').value)||1)),done:false};extra.customQuests.push(q);saveExtra();el('customQuestName').value='';el('customQuestDesc').value='';renderCustom();refreshXp()};
+
+let editingTrainingId=null;
 function renderTraining(){
-el('trainingDay').value=String(state.selected);
-el('trainingList').innerHTML=extra.trainings.length?extra.trainings.slice().sort((a,b)=>b.day-a.day).map(t=>`<div class="training-entry"><div class="row"><b>${escapeHtml(t.type)}</b><span class="chip">День ${t.day}</span></div><div class="muted">${t.duration?escapeHtml(t.duration)+' мин · ':''}${t.rpe?'Нагрузка '+escapeHtml(t.rpe)+'/10':''}</div><p style="white-space:pre-wrap;margin:8px 0">${escapeHtml(t.exercises)}</p><p class="muted" style="white-space:pre-wrap">${escapeHtml(t.notes)}</p><button class="pill" data-training-delete="${t.id}">Удалить запись</button></div>`).join(''):'<p class="muted">Пока тренировок нет. Первая запись появится здесь.</p>';
-el('trainingList').querySelectorAll('[data-training-delete]').forEach(b=>b.onclick=()=>{if(confirm('Удалить тренировку?')){extra.trainings=extra.trainings.filter(t=>t.id!==b.dataset.trainingDelete);saveExtra();renderTraining()}})
+ const list=extra.trainings.slice().sort((a,b)=>b.day-a.day);
+ el('trainingList').innerHTML=list.length?list.map(t=>`<div class="training-entry">
+ <div class="compact-entry-head"><span class="chip">День ${t.day}</span><b>${escapeHtml(t.type)}</b><span class="compact-spacer"></span>
+ <button class="icon-btn" data-training-edit="${escapeHtml(t.id)}" title="Изменить" aria-label="Изменить тренировку">✎</button>
+ <button class="icon-btn" data-training-delete="${escapeHtml(t.id)}" title="Удалить" aria-label="Удалить тренировку">✕</button></div>
+ <details class="compact-details"><summary>${t.duration?escapeHtml(t.duration)+' мин · ':''}${t.rpe?'Нагрузка '+escapeHtml(t.rpe)+'/10 · ':''}Подробнее ▾</summary>
+ <div class="entry-body">${t.exercises?`<p>${escapeHtml(t.exercises)}</p>`:''}${t.notes?`<p class="muted">${escapeHtml(t.notes)}</p>`:''}</div></details></div>`).join(''):'<p class="muted">Пока тренировок нет. Добавь первую с помощью ＋ наверху.</p>';
+ el('trainingList').querySelectorAll('[data-training-delete]').forEach(b=>b.onclick=()=>{if(confirm('Удалить тренировку?')){extra.trainings=extra.trainings.filter(t=>t.id!==b.dataset.trainingDelete);saveExtra();renderTraining()}});
+ el('trainingList').querySelectorAll('[data-training-edit]').forEach(b=>b.onclick=()=>{const t=extra.trainings.find(x=>x.id===b.dataset.trainingEdit);if(!t)return;
+ editingTrainingId=t.id;el('trainingDay').value=t.day;el('trainingType').value=t.type;
+ el('trainingDuration').value=t.duration||'';el('trainingRpe').value=t.rpe||'';el('strengthBuilder').hidden=t.type!=='Силовая';
+ el('trainingExercises').value=t.exercises||'';el('trainingNotes').value=t.notes||'';
+ el('trainingFormPanel').hidden=false;el('trainingPlus').textContent='✕';el('trainingPlus').setAttribute('aria-expanded','true');
+ el('addTraining').textContent='✓ Сохранить изменения';el('cancelTrainingEdit').style.display='inline-block';
+ el('trainingFormPanel').scrollIntoView({behavior:'smooth',block:'start'});
+ });
 }
-el('addTraining').onclick=()=>{const t={id:'t'+Date.now()+Math.random().toString(36).slice(2),day:Number(el('trainingDay').value),type:el('trainingType').value,duration:el('trainingDuration').value,rpe:el('trainingRpe').value,exercises:el('trainingExercises').value.trim(),notes:el('trainingNotes').value.trim()};if(!t.exercises&&!t.duration)return alert('Укажи длительность или упражнения');extra.trainings.push(t);saveExtra();['trainingDuration','trainingRpe','trainingExercises','trainingNotes'].forEach(id=>el(id).value='');renderTraining()};
+
+
+el('addTraining').onclick=()=>{
+ const duration=el('trainingDuration').value.trim(),exercises=el('trainingExercises').value.trim();
+ const t={id:editingTrainingId||'t'+Date.now()+Math.random().toString(36).slice(2),day:Number(el('trainingDay').value),
+ type:el('trainingType').value,duration,rpe:el('trainingRpe').value,exercises,notes:el('trainingNotes').value.trim()};
+ if(!t.day||t.day<1||t.day>70)return alert('Выбери день тренировки');
+ // Running and recovery sessions may have no duration or exercise description; save them anyway.
+ const old=extra.trainings.find(x=>x.id===editingTrainingId);
+ if(old)Object.assign(old,t);else extra.trainings.push(t);
+ saveExtra();resetTrainingForm();renderTraining();
+};
+function resetTrainingForm(){
+ editingTrainingId=null;
+ ['trainingDuration','trainingRpe','trainingExercises','trainingNotes'].forEach(id=>el(id).value='');
+ el('addTraining').textContent='＋ Сохранить тренировку';el('cancelTrainingEdit').style.display='none';
+ el('trainingFormPanel').hidden=true;el('trainingPlus').setAttribute('aria-expanded','false');el('trainingPlus').textContent='＋';
+}
+el('cancelTrainingEdit').onclick=resetTrainingForm;
+
+
 function renderWisdom(){
-const n=Number(el('wisdomDay').value)||state.selected;
-el('wisdomTitle').textContent='День '+n;
-el('wisdomQuestion').textContent='«'+philosophy[n-1]+'»';
-el('wisdomAnswer').value=extra.answers[n]||'';
-el('wisdomHistory').innerHTML=Object.keys(extra.answers).filter(k=>extra.answers[k]?.trim()).sort((a,b)=>Number(b)-Number(a)).map(k=>`<div class="quest-row"><b>День ${k}</b><p>${escapeHtml(philosophy[Number(k)-1])}</p><p style="white-space:pre-wrap">${escapeHtml(extra.answers[k])}</p></div>`).join('')||'<p class="muted">Твои мысли появятся здесь.</p>';
+ const n=Number(el('wisdomDay').value)||state.selected;
+ el('wisdomTitle').textContent='День '+n;
+ el('wisdomQuestion').textContent='«'+philosophy[n-1]+'»';
+ el('wisdomAnswer').value=extra.answers[n]||'';
+ el('wisdomHistory').innerHTML=Object.keys(extra.answers).filter(k=>extra.answers[k]?.trim()).sort((a,b)=>Number(b)-Number(a)).map(k=>
+ `<div class="quest-row"><div class="compact-entry-head"><span class="chip">День ${k}</span><span class="compact-spacer"></span>
+ <button class="icon-btn" data-wisdom-edit="${k}" title="Изменить" aria-label="Изменить размышление">✎</button>
+ <button class="icon-btn" data-wisdom-delete="${k}" title="Удалить" aria-label="Удалить размышление">✕</button></div>
+ <details class="compact-details"><summary><em>${escapeHtml(philosophy[Number(k)-1]||'Вопрос дня')}</em> ▾</summary><div class="entry-body">${escapeHtml(extra.answers[k])}</div></details></div>`).join('')||'<p class="muted">Твои мысли появятся здесь.</p>';
+ el('wisdomHistory').querySelectorAll('[data-wisdom-edit]').forEach(b=>b.onclick=()=>{
+  el('wisdomFormPanel').hidden=false;el('wisdomPlus').setAttribute('aria-expanded','true');
+  el('wisdomDay').value=b.dataset.wisdomEdit;renderWisdom();
+  el('wisdomFormPanel').scrollIntoView({behavior:'smooth',block:'start'});
+ });
+ el('wisdomHistory').querySelectorAll('[data-wisdom-delete]').forEach(b=>b.onclick=()=>{
+  if(confirm('Удалить размышление?')){delete extra.answers[b.dataset.wisdomDelete];saveExtra();renderWisdom()}
+ });
 }
+
 el('wisdomDay').onchange=renderWisdom;
 el('wisdomAnswer').oninput=e=>{extra.answers[el('wisdomDay').value]=e.target.value;saveExtra()};
 el('saveWisdom').onclick=()=>{saveExtra();renderWisdom();alert('Размышление сохранено')};
@@ -366,12 +634,12 @@ el('ritualChecklist').innerHTML=rituals.map(([id,title,desc])=>`<label class="ch
 el('ritualChecklist').querySelectorAll('[data-ritual]').forEach(c=>c.onchange=()=>{extra.rituals[n]={...(extra.rituals[n]||{}),[c.dataset.ritual]:c.checked};saveExtra()});
 }
 el('ritualDay').onchange=renderRituals;
-document.querySelectorAll('[data-view]').forEach(b=>b.onclick=()=>{document.querySelectorAll('[data-view]').forEach(x=>x.classList.toggle('active',x===b));document.querySelectorAll('.extra-view').forEach(x=>x.classList.toggle('active',x.id==='view-'+b.dataset.view));if(b.dataset.view==='training')renderTraining();if(b.dataset.view==='wisdom'){el('wisdomDay').value=state.selected;renderWisdom()}if(b.dataset.view==='rituals'){el('ritualDay').value=state.selected;renderRituals()}if(b.dataset.view==='quests')renderCustom()});
+document.querySelectorAll('[data-view]').forEach(b=>b.onclick=()=>{document.querySelectorAll('[data-view]').forEach(x=>x.classList.toggle('active',x===b));document.querySelectorAll('.extra-view').forEach(x=>x.classList.toggle('active',x.id==='view-'+b.dataset.view));if(b.dataset.view==='training')renderTraining();if(b.dataset.view==='wisdom'){el('wisdomDay').value=state.selected;renderWisdom()}if(b.dataset.view==='rituals'){el('ritualDay').value=state.selected;renderRituals();renderDojo()}if(b.dataset.view==='quests')renderCustom();if(b.dataset.view==='weight')renderWeight()});
 const oldExport=el('export').onclick;
 el('export').onclick=()=>{const blob=new Blob([JSON.stringify({app:'warrior70',version:2,exported:new Date().toISOString(),...state,extra},null,2)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='put_voina_fantasy_backup.json';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),2000)};
-el('import').onchange=async e=>{const file=e.target.files[0];if(!file)return;try{const d=JSON.parse(await file.text());if(d.app!=='warrior70'||!d.days||typeof d.days!=='object')throw Error('Неверный формат');if(confirm('Заменить текущий прогресс данными из файла?')){state={days:d.days,quests:d.quests||{},selected:Math.max(1,Math.min(70,Number(d.selected)||1))};if(d.extra&&typeof d.extra==='object')extra={trainings:d.extra.trainings||[],customQuests:d.extra.customQuests||[],answers:d.extra.answers||{},rituals:d.extra.rituals||{},customRituals:d.extra.customRituals||[],diary:d.extra.diary||[],dailyOverrides:d.extra.dailyOverrides||{}};save();saveExtra();render();renderCustom();renderTraining();renderWisdom();renderRituals();refreshXp()}}catch(err){alert('Не удалось загрузить резервную копию')}e.target.value=''};
+el('import').onchange=async e=>{const file=e.target.files[0];if(!file)return;try{const d=JSON.parse(await file.text());if(d.app!=='warrior70'||!d.days||typeof d.days!=='object')throw Error('Неверный формат');if(confirm('Заменить текущий прогресс данными из файла?')){state={days:d.days,quests:d.quests||{},selected:Math.max(1,Math.min(70,Number(d.selected)||1))};if(d.extra&&typeof d.extra==='object')extra={trainings:d.extra.trainings||[],customQuests:d.extra.customQuests||[],answers:d.extra.answers||{},rituals:d.extra.rituals||{},customRituals:d.extra.customRituals||[],diary:d.extra.diary||[],dailyOverrides:d.extra.dailyOverrides||{},weights:d.extra.weights||[],dojo:d.extra.dojo||{practices:{},vows:[]}};save();saveExtra();render();renderCustom();renderTraining();renderWisdom();renderRituals();renderDojo();renderWeight();refreshXp()}}catch(err){alert('Не удалось загрузить резервную копию')}e.target.value=''};
 const oldReset=el('reset').onclick;
-el('reset').onclick=()=>{if(confirm('Удалить ВЕСЬ прогресс, включая тренировки, вопросы и свои испытания? Сначала сохрани резервную копию.')){state={days:{},quests:{},selected:1};extra={trainings:[],customQuests:[],answers:{},rituals:{},customRituals:[],diary:[],dailyOverrides:{}};save();saveExtra();render();renderCustom();renderTraining();renderWisdom();renderRituals();refreshXp()}};
+el('reset').onclick=()=>{if(confirm('Удалить ВЕСЬ прогресс, включая тренировки, вопросы и свои испытания? Сначала сохрани резервную копию.')){state={days:{},quests:{},selected:1};extra={trainings:[],customQuests:[],answers:{},rituals:{},customRituals:[],diary:[],dailyOverrides:{},weights:[],dojo:{practices:{},vows:[]}};save();saveExtra();render();renderCustom();renderTraining();renderWisdom();renderRituals();renderDojo();renderWeight();refreshXp()}};
 function renderNew(){refreshXp()}
 const previousRenderExtras=renderExtras;
 renderExtras=function(){previousRenderExtras();renderNew()};
@@ -399,28 +667,42 @@ function renderStrength(){
 el('trainingType').addEventListener('change',renderStrength);
 el('addExercise').onclick=()=>{strengthExercises.push(newExercise('Новое упражнение'));renderStrength()};
 resetStrength();
-const originalRenderTraining=renderTraining;
+// Legacy training override removed: the compact renderer owns edit/delete actions.
+const originalCompactRenderTraining=renderTraining;
 renderTraining=function(){
- originalRenderTraining();
- el('trainingList').querySelectorAll('[data-training-delete]').forEach(b=>{const wrap=b.closest('.training-entry');const edit=document.createElement('button');edit.className='pill';edit.textContent='Изменить';edit.style.marginRight='8px';wrap.insertBefore(edit,b);edit.onclick=()=>{const t=extra.trainings.find(x=>x.id===b.dataset.trainingDelete);if(!t)return;editingTraining=t.id;el('trainingDay').value=t.day;el('trainingType').value=t.type;el('trainingDuration').value=t.duration;el('trainingRpe').value=t.rpe;el('trainingExercises').value=t.exercises||'';el('trainingNotes').value=t.notes||'';strengthExercises=t.structured?JSON.parse(JSON.stringify(t.structured)):strengthNames.map(newExercise);renderStrength();el('addTraining').textContent='Сохранить изменения';el('cancelTrainingEdit').style.display='inline-block';window.scrollTo({top:0,behavior:'smooth'})}});
- el('trainingList').querySelectorAll('.training-entry').forEach((wrap,i)=>{const t=extra.trainings.slice().sort((a,b)=>b.day-a.day)[i];if(t?.structured?.length){const details=document.createElement('details');details.innerHTML='<summary>Подходы и упражнения ('+t.structured.length+')</summary>'+t.structured.map(e=>'<p><b>'+escapeHtml(e.name)+'</b>: '+e.sets.map(a=>escapeHtml(a.type)+' — '+escapeHtml(a.reps||'—')+' повт., '+escapeHtml(a.weight||'—')+' кг').join('; ')+'</p>').join('');wrap.append(details)}});
-};
-el('cancelTrainingEdit').onclick=()=>{editingTraining=null;el('addTraining').textContent='＋ Сохранить тренировку';el('cancelTrainingEdit').style.display='none';['trainingDuration','trainingRpe','trainingExercises','trainingNotes'].forEach(id=>el(id).value='');resetStrength()};
-el('addTraining').onclick=()=>{
- const t={id:editingTraining||uid(),day:Number(el('trainingDay').value),type:el('trainingType').value,duration:el('trainingDuration').value,rpe:el('trainingRpe').value,exercises:el('trainingExercises').value.trim(),notes:el('trainingNotes').value.trim(),structured:el('trainingType').value==='Силовая'?JSON.parse(JSON.stringify(strengthExercises)):[]};
- if(!t.exercises&&!t.duration&&!t.structured.length)return alert('Добавь упражнения или длительность');
- if(editingTraining){const idx=extra.trainings.findIndex(x=>x.id===editingTraining);if(idx>=0)extra.trainings[idx]=t}else extra.trainings.push(t);
- saveExtra();el('cancelTrainingEdit').click();renderTraining();
+ originalCompactRenderTraining();
+ el('trainingList').querySelectorAll('.training-entry').forEach((wrap,i)=>{
+  const t=extra.trainings.slice().sort((a,b)=>b.day-a.day)[i];
+  if(t?.structured?.length){
+   const body=wrap.querySelector('.entry-body');
+   if(body)body.insertAdjacentHTML('beforeend',t.structured.map(e=>'<p><b>'+escapeHtml(e.name)+'</b>: '+e.sets.map(a=>escapeHtml(a.type)+' — '+escapeHtml(a.reps||'—')+' повт., '+escapeHtml(a.weight||'—')+' кг').join('; ')+'</p>').join(''));
+  }
+ });
 };
 // Editable quests
 const oldRenderCustom=renderCustom;
-renderCustom=function(){oldRenderCustom();el('customQuestList').querySelectorAll('[data-quest-delete]').forEach(b=>{const edit=document.createElement('button');edit.className='pill';edit.textContent='Изменить';edit.style.marginRight='8px';b.parentNode.insertBefore(edit,b);edit.onclick=()=>{const q=extra.customQuests.find(q=>q.id===b.dataset.questDelete);if(!q)return;editingQuest=q.id;el('customQuestName').value=q.name;el('customQuestDesc').value=q.desc;el('customQuestXp').value=q.xp;el('customQuestDay').value=q.day;el('cancelQuestEdit').style.display='inline-block';el('addCustomQuest').textContent='Сохранить изменения'}})};
+renderCustom=function(){
+ oldRenderCustom();
+ el('customQuestList').querySelectorAll('[data-quest-delete]').forEach(b=>{
+  const edit=document.createElement('button');edit.type='button';edit.className='icon-btn';
+  edit.textContent='✎';edit.title='Изменить';edit.setAttribute('aria-label','Изменить');
+  b.insertAdjacentElement('beforebegin',edit);
+  b.classList.add('icon-btn');b.textContent='✕';b.title='Удалить';b.setAttribute('aria-label','Удалить');
+  edit.onclick=()=>{
+   const q=extra.customQuests.find(q=>q.id===b.dataset.questDelete);if(!q)return;
+   editingQuest=q.id;el('customQuestName').value=q.name;el('customQuestDesc').value=q.desc;
+   el('customQuestXp').value=q.xp;el('customQuestDay').value=q.day;
+   el('questFormPanel').hidden=false;el('questPlus').textContent='✕';
+   el('questPlus').setAttribute('aria-expanded','true');
+   el('cancelQuestEdit').style.display='inline-block';
+   el('addCustomQuest').textContent='Сохранить изменения';
+  };
+ });
+};
 el('cancelQuestEdit').onclick=()=>{editingQuest=null;el('customQuestName').value='';el('customQuestDesc').value='';el('customQuestXp').value='30';el('customQuestDay').value='1';el('cancelQuestEdit').style.display='none';el('addCustomQuest').textContent='✦ Сохранить испытание'};
 el('addCustomQuest').onclick=()=>{const name=el('customQuestName').value.trim();if(!name)return alert('Введи название');const old=extra.customQuests.find(x=>x.id===editingQuest);const q={id:editingQuest||uid(),name,desc:el('customQuestDesc').value.trim(),xp:Math.max(0,Math.min(500,Number(el('customQuestXp').value)||0)),day:Math.max(1,Math.min(70,Number(el('customQuestDay').value)||1)),done:old?.done||false};if(old)Object.assign(old,q);else extra.customQuests.push(q);saveExtra();el('cancelQuestEdit').click();renderCustom();refreshXp()};
 // Editable reflections
 el('deleteWisdom').onclick=()=>{const n=el('wisdomDay').value;if(extra.answers[n]&&confirm('Удалить размышление за день '+n+'?')){delete extra.answers[n];saveExtra();renderWisdom()}};
-const oldRenderWisdom=renderWisdom;
-renderWisdom=function(){oldRenderWisdom();el('wisdomHistory').querySelectorAll('.quest-row').forEach(w=>{const label=w.querySelector('b')?.textContent||'';const n=Number(label.replace(/\D/g,''));if(!n)return;const buttons=document.createElement('div');buttons.className='buttons';buttons.innerHTML='<button class="pill">Изменить</button><button class="pill">Удалить</button>';buttons.children[0].onclick=()=>{el('wisdomDay').value=n;renderWisdom();window.scrollTo({top:0,behavior:'smooth'})};buttons.children[1].onclick=()=>{if(confirm('Удалить запись дня '+n+'?')){delete extra.answers[n];saveExtra();renderWisdom()}};w.append(buttons)})};
 // Custom rituals
 function renderRitualEditor(){
  const n=Number(el('ritualDay').value)||state.selected;
@@ -444,17 +726,190 @@ el('editDailyQuest').onclick=()=>{const n=state.selected;const v=prompt('Поб�
 el('resetDailyQuest').onclick=()=>{const n=state.selected;delete (extra.dailyOverrides[n]||{}).quest;saveExtra();renderExtras()};
 // Independent freeform diary
 el('diaryDay').innerHTML=optionDays;el('diaryDay').value=state.selected;
+
 function renderDiary(){
- el('diaryList').innerHTML=extra.diary.slice().sort((a,b)=>b.day-a.day).map(d=>`<div class="quest-row"><div class="row"><b>${escapeHtml(d.title||'Без названия')}</b><span class="chip">День ${d.day}</span></div><p style="white-space:pre-wrap">${escapeHtml(d.body)}</p><div class="buttons"><button class="pill" data-edit-diary="${d.id}">Изменить</button><button class="pill" data-del-diary="${d.id}">Удалить</button></div></div>`).join('')||'<p class="mini">Пока записей нет.</p>';
- el('diaryList').querySelectorAll('[data-edit-diary]').forEach(b=>b.onclick=()=>{const d=extra.diary.find(d=>d.id===b.dataset.editDiary);editingDiary=d.id;el('diaryDay').value=d.day;el('diaryTitle').value=d.title;el('diaryBody').value=d.body;el('cancelDiary').style.display='inline-block';el('saveDiary').textContent='Сохранить изменения'});
+ el('diaryList').innerHTML=extra.diary.slice().sort((a,b)=>b.day-a.day).map(d=>`<div class="quest-row">
+ <div class="compact-entry-head"><span class="chip">День ${d.day}</span><b>${escapeHtml(d.title||'Без названия')}</b><span class="compact-spacer"></span>
+ <button class="icon-btn" data-edit-diary="${escapeHtml(d.id)}" title="Изменить" aria-label="Изменить запись">✎</button>
+ <button class="icon-btn" data-del-diary="${escapeHtml(d.id)}" title="Удалить" aria-label="Удалить запись">✕</button></div>
+ <details class="compact-details"><summary>Читать запись ▾</summary><div class="entry-body">${escapeHtml(d.body)}</div></details></div>`).join('')||'<p class="mini">Пока записей нет.</p>';
+ el('diaryList').querySelectorAll('[data-edit-diary]').forEach(b=>b.onclick=()=>{
+  const d=extra.diary.find(d=>d.id===b.dataset.editDiary);if(!d)return;
+  editingDiary=d.id;el('diaryDay').value=d.day;el('diaryTitle').value=d.title;el('diaryBody').value=d.body;
+  el('cancelDiary').style.display='inline-block';el('saveDiary').textContent='Сохранить изменения';
+  el('diaryFormPanel').hidden=false;el('diaryPlus').setAttribute('aria-expanded','true');
+  el('diaryFormPanel').scrollIntoView({behavior:'smooth',block:'start'});
+ });
  el('diaryList').querySelectorAll('[data-del-diary]').forEach(b=>b.onclick=()=>{if(confirm('Удалить запись?')){extra.diary=extra.diary.filter(d=>d.id!==b.dataset.delDiary);saveExtra();renderDiary()}});
 }
+
 el('saveDiary').onclick=()=>{const body=el('diaryBody').value.trim();if(!body)return alert('Напиши текст записи');const d={id:editingDiary||uid(),day:Number(el('diaryDay').value),title:el('diaryTitle').value.trim(),body};const old=extra.diary.find(x=>x.id===editingDiary);if(old)Object.assign(old,d);else extra.diary.push(d);saveExtra();el('cancelDiary').click();renderDiary()};
 el('cancelDiary').onclick=()=>{editingDiary=null;el('diaryTitle').value='';el('diaryBody').value='';el('saveDiary').textContent='Сохранить запись';el('cancelDiary').style.display='none'};
 document.querySelector('[data-view="diary"]').addEventListener('click',()=>{el('diaryDay').value=state.selected;renderDiary()});
 renderDiary();renderRitualEditor();renderStrength();
 
 
+
+// Weight diary: included in extra so local backups and Supabase snapshots carry the same measurements.
+function renderWeight(){
+ const points=(Array.isArray(extra.weights)?extra.weights:[]).filter(x=>x&&/^\d{4}-\d{2}-\d{2}$/.test(x.date)&&Number.isFinite(Number(x.kg))&&Number(x.kg)>=20&&Number(x.kg)<=400).sort((a,b)=>a.date.localeCompare(b.date));
+ const fmt=v=>Number(v).toLocaleString('ru-RU',{maximumFractionDigits:1})+' кг';
+ el('weightCount').textContent=points.length+' измерений';
+ el('weightFirst').textContent=points.length?fmt(points[0].kg):'—';
+ el('weightLatest').textContent=points.length?fmt(points[points.length-1].kg):'—';
+ const diff=points.length>1?Number(points[points.length-1].kg)-Number(points[0].kg):null;
+ el('weightChange').textContent=diff===null?'—':(diff>0?'+':'')+diff.toLocaleString('ru-RU',{maximumFractionDigits:1})+' кг';
+ el('weightHistory').innerHTML=points.length?points.slice().reverse().map(x=>`<div class="weight-history-item"><span>${escapeHtml(x.date.split('-').reverse().join('.'))}</span><b>${fmt(x.kg)}</b><button class="pill" type="button" data-weight-delete="${escapeHtml(x.date)}" aria-label="Удалить измерение ${escapeHtml(x.date)}">✕</button></div>`).join(''):'<p class="muted">Пока нет измерений.</p>';
+ el('weightHistory').querySelectorAll('[data-weight-delete]').forEach(b=>b.onclick=()=>{if(!confirm('Удалить измерение за '+b.dataset.weightDelete+'?'))return;extra.weights=extra.weights.filter(x=>x.date!==b.dataset.weightDelete);saveExtra();renderWeight()});
+ if(!points.length){el('weightChart').innerHTML='<p class="muted" style="padding:30px 8px;text-align:center">Добавь первое измерение — здесь появится график 🌸</p>';return}
+ const W=760,H=300,L=60,R=25,T=25,B=55,vals=points.map(x=>Number(x.kg)),min=Math.min(...vals),max=Math.max(...vals),padding=Math.max(0.5,(max-min)*0.2),low=min-padding,high=max+padding;
+ const times=points.map(x=>Date.parse(x.date+'T00:00:00Z')),tmin=times[0],tmax=times[times.length-1],xAt=i=>tmax===tmin?(L+W-R)/2:L+(times[i]-tmin)/(tmax-tmin)*(W-L-R),yAt=v=>T+(high-v)/(high-low)*(H-T-B);
+ const path=points.map((p,i)=>(i?'L':'M')+xAt(i).toFixed(1)+' '+yAt(Number(p.kg)).toFixed(1)).join(' ');
+ const grid=Array.from({length:5},(_,i)=>{const v=low+(high-low)*i,y=yAt(v);return `<line x1="${L}" y1="${y}" x2="${W-R}" y2="${y}" stroke="#ead6d8" stroke-dasharray="4 5"/><text class="axis" x="${L-9}" y="${y+4}" text-anchor="end">${v.toFixed(1)}</text>`}).join('');
+ const labelIndexes=[...new Set([0,Math.floor((points.length-1)/2),points.length-1])];
+ const labels=labelIndexes.map(i=>`<text class="axis" x="${xAt(i)}" y="${H-17}" text-anchor="${i===0&&points.length>1?'start':i===points.length-1&&points.length>1?'end':'middle'}">${points[i].date.slice(5).split('-').reverse().join('.')}</text>`).join('');
+ const circles=points.map((p,i)=>`<circle cx="${xAt(i)}" cy="${yAt(Number(p.kg))}" r="4.5" fill="#a45c85" stroke="#fff" stroke-width="2"><title>${p.date.split('-').reverse().join('.')}: ${fmt(p.kg)}</title></circle>`).join('');
+ el('weightChart').innerHTML=`<svg viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="График ${points.length} измерений веса">${grid}<path d="${path}" fill="none" stroke="#bd7299" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>${circles}${labels}<text class="axis" x="16" y="16">кг</text></svg>`;
+}
+el('weightDate').value=new Date().toLocaleDateString('en-CA');
+el('weightSave').onclick=()=>{
+ const d=el('weightDate').value,kg=Number(el('weightValue').value.replace(',','.'));
+ if(!/^\d{4}-\d{2}-\d{2}$/.test(d)||!Number.isFinite(Date.parse(d+'T00:00:00Z'))){el('weightMessage').textContent='Выбери корректную дату.';return}
+ if(!el('weightValue').value.trim()||!Number.isFinite(kg)||kg<20||kg>400){el('weightMessage').textContent='Укажи вес от 20 до 400 кг.';return}
+ if(!Array.isArray(extra.weights))extra.weights=[];
+ const existing=extra.weights.findIndex(x=>x.date===d);
+ if(existing>=0)extra.weights[existing]={date:d,kg};else extra.weights.push({date:d,kg});
+ saveExtra();renderWeight();el('weightMessage').textContent='✓ Измерение сохранено'+(existing>=0?' (запись за дату обновлена)':'')+'.';
+ el('weightValue').value='';
+};
+renderWeight();
+
+
+// Challenge map and journey previews use the existing weekly/custom quest state.
+function renderChallengeMap(){
+ const root=el('challengeMap');if(!root)return;
+ const main=quests.map((q,i)=>({id:'week-'+i,day:Math.min(70,1+i*7),name:q[0],done:!!state.quests[i],important:i===0||i===4||i===9,icon:['⛩️','🌉','🍵','🏮','🐉','🪷','⚔️','🧭','🏔️','🏯'][i],weekly:true,index:i,xp:30}));
+ const custom=(extra.customQuests||[]).map(q=>({id:q.id,day:Number(q.day)||1,name:q.name,done:!!q.done,important:false,icon:'🎴',weekly:false,xp:Number(q.xp)||0}));
+ const all=[...main,...custom];
+ root.innerHTML='<div class="challenge-track">'+all.map((q,i)=>`<button type="button" class="challenge-node ${q.important?'major':''} ${q.done?'cleared':''}" data-challenge="${escapeHtml(q.id)}"><span class="challenge-reward">+${q.xp} XP</span><span class="challenge-symbol">${q.icon}</span><b>${escapeHtml(q.name)}</b><small>День ${q.day} · ${q.done?'✓ Выполнено':q.weekly?'Главное испытание':'Личное испытание'}</small></button>`).join('')+'</div>';
+ root.querySelectorAll('[data-challenge]').forEach(b=>b.onclick=()=>{const q=all.find(x=>x.id===b.dataset.challenge);if(!q)return;if(q.weekly){state.quests[q.index]=!state.quests[q.index];save();render();}else{const target=extra.customQuests.find(x=>x.id===q.id);if(target){target.done=!target.done;saveExtra();renderCustom();refreshXp()}}renderChallengeMap();renderJourneyChallenges()});
+}
+function renderJourneyChallenges(){
+ const slot=el('journeyChallenges');if(!slot)return;
+ const today=state.selected;
+ const custom=(extra.customQuests||[]).filter(q=>!q.done).map(q=>({day:Number(q.day)||1,title:q.name,icon:'🎴'}));
+ const weekly=quests.map((q,i)=>({day:Math.min(70,1+i*7),title:q[0],icon:['⛩️','🌉','🍵','🏮','🐉','🪷','⚔️','🧭','🏔️','🏯'][i],done:!!state.quests[i]})).filter(q=>!q.done);
+ const next=[...weekly,...custom].sort((a,b)=>Math.abs(a.day-today)-Math.abs(b.day-today)).slice(0,4);
+ slot.innerHTML=next.length?next.map(q=>`<div class="quest-row"><span style="font-size:23px">${q.icon}</span> <b>${escapeHtml(q.title)}</b> <span class="chip">День ${q.day}</span></div>`).join(''):'<p class="muted">Все испытания пройдены! 🏆</p>';
+}
+el('goToChallenges').onclick=()=>document.querySelector('[data-view="quests"]').click();
+const oldRenderChallenges=renderCustom;
+renderCustom=function(){oldRenderChallenges();renderChallengeMap();renderJourneyChallenges()};
+const oldRenderJourney=renderExtras;
+renderExtras=function(){oldRenderJourney();renderJourneyChallenges()};
+renderChallengeMap();renderJourneyChallenges();
+
+
+// Dojo stores only new fields in extra.dojo; old ritual records remain intact.
+const dojoCatalog=[
+ {id:'breath',icon:'🪷',title:'Пять минут тишины',skill:'focus',duration:'5 минут',instruction:'Сядь удобно. Наблюдай за естественным дыханием. Когда внимание уходит, мягко возвращай его к ощущениям. Не нужно задерживать дыхание.'},
+ {id:'plan',icon:'🎯',title:'Три главных дела',skill:'discipline',duration:'3 минуты',instruction:'Запиши до трёх действительно важных дел на сегодня. Оставь место для отдыха и непредвиденных событий.'},
+ {id:'recovery',icon:'🌙',title:'Проверка восстановления',skill:'recovery',duration:'2 минуты',instruction:'Оцени сон, усталость и настроение. Реши, нужен ли сегодня более мягкий план. Отдых — тоже действие.'},
+ {id:'gratitude',icon:'🍵',title:'Тёплый итог дня',skill:'care',duration:'4 минуты',instruction:'Назови три вещи, которые сегодня были приятными или полезными. Даже совсем небольшие считаются.'},
+ {id:'stretch',icon:'🌿',title:'Мягкое движение',skill:'recovery',duration:'5 минут',instruction:'Выбери комфортное движение без боли: прогулку по комнате, мягкую разминку или смену положения. Не растягивайся через дискомфорт.'},
+ {id:'reflect',icon:'📜',title:'Одна честная мысль',skill:'focus',duration:'3 минуты',instruction:'Ответь себе: что сегодня помогло мне идти своим путём? Одного предложения достаточно.'}
+];
+function dojoData(){if(!extra.dojo||typeof extra.dojo!=='object')extra.dojo={practices:{},vows:[]};if(!extra.dojo.practices)extra.dojo.practices={};if(!Array.isArray(extra.dojo.vows))extra.dojo.vows=[];return extra.dojo}
+function dojoDay(){return state.selected}
+function renderDojo(){
+ const d=dojoData(),n=dojoDay(),done=d.practices[n]||{},count=dojoCatalog.filter(p=>done[p.id]).length;
+ el('dojoPracticeCounter').textContent=count+' / 3 · день '+n;
+ el('dojoPractices').innerHTML=dojoCatalog.map(p=>`<details class="dojo-practice ${done[p.id]?'done':''}"><summary><span class="practice-icon">${p.icon}</span><span class="practice-text"><b>${p.title}</b><small>${p.duration} · ${done[p.id]?'✓ Выполнено':'Нажми для инструкции'}</small></span><span>⌄</span></summary><div class="practice-body"><p>${p.instruction}</p><button type="button" class="pill ${done[p.id]?'':'primary'}" data-dojo-practice="${p.id}">${done[p.id]?'↶ Отменить отметку':'✓ Практика выполнена'}</button></div></details>`).join('');
+ el('dojoPractices').querySelectorAll('[data-dojo-practice]').forEach(b=>b.onclick=()=>{
+  const id=b.dataset.dojoPractice,v=dojoData(),current=v.practices[n]||{},total=Object.values(current).filter(Boolean).length;
+  if(!current[id]&&total>=3){alert('Выбери максимум три практики в день. Лучше меньше, но с удовольствием.');return}
+  v.practices[n]={...current,[id]:!current[id]};saveExtra();renderDojo();
+ });
+ const completedDays=Object.values(d.practices).filter(x=>Object.values(x||{}).some(Boolean)).length;
+ const stage=completedDays===0?0:completedDays<4?1:completedDays<12?2:completedDays<25?3:4;
+ const flowers=stage>=3?'<text x="83" y="86" font-size="28">🌸</text><text x="187" y="68" font-size="26">🌸</text><text x="218" y="119" font-size="22">🌸</text>':'';
+ const canopy=stage>=2?'<ellipse cx="153" cy="106" rx="88" ry="67" fill="#b4d7bc" opacity=".8"/><ellipse cx="108" cy="115" rx="53" ry="50" fill="#91c4ab" opacity=".8"/><ellipse cx="202" cy="116" rx="55" ry="49" fill="#d4e9c7" opacity=".9"/>':'';
+ const branches=stage>=1?'<path d="M150 222 Q138 166 110 137 M152 188 Q178 140 209 128" fill="none" stroke="#956d62" stroke-width="11" stroke-linecap="round"/>':'';
+ el('dojoTree').innerHTML=`<svg viewBox="0 0 310 270" role="img" aria-label="Дерево мастерства: ${completedDays} дней практики"><ellipse cx="155" cy="247" rx="111" ry="15" fill="#b6d3b5"/><path d="M148 244 Q144 197 151 147" fill="none" stroke="#936b5e" stroke-width="${stage===0?6:18}" stroke-linecap="round"/>${branches}${canopy}${flowers}<text x="155" y="261" text-anchor="middle" font-size="11" fill="#7e6973">🌱 ${completedDays} дней практики</text></svg>`;
+ el('dojoTreeCaption').textContent=['Семя пути','Первые ростки','Крепкие ветви','Время цветения','Цветущий сад'][stage];
+ const skillNames={focus:['🧘','Осознанность'],discipline:['🎯','Самоорганизация'],recovery:['🌙','Восстановление'],care:['🌿','Забота о себе']};
+ el('dojoSkills').innerHTML=Object.entries(skillNames).map(([id,[icon,title]])=>{
+  const total=Object.values(d.practices).reduce((a,v)=>a+dojoCatalog.filter(p=>p.skill===id&&v?.[p.id]).length,0);
+  return `<div class="dojo-skill"><div class="row"><b>${icon} ${title}</b><small>${total} практик</small></div><div class="bar"><div style="width:${Math.min(100,total/14*100)}%"></div></div></div>`;
+ }).join('');
+ el('dojoVows').innerHTML=d.vows.map(v=>`<div class="dojo-vow"><span><b>${escapeHtml(v.title)}</b><small style="display:block"> ${v.done?'✓ Выполнено':'Личный обет'}</small></span><button class="pill" data-vow-toggle="${escapeHtml(v.id)}">${v.done?'↶':'✓'}</button><button class="pill" data-vow-remove="${escapeHtml(v.id)}">✕</button></div>`).join('')||'<p class="muted" style="margin-top:12px">Пока нет обетов. Можно начать с одного.</p>';
+ el('dojoVows').querySelectorAll('[data-vow-toggle]').forEach(b=>b.onclick=()=>{const v=dojoData().vows.find(x=>x.id===b.dataset.vowToggle);if(v){v.done=!v.done;saveExtra();renderDojo()}});
+ el('dojoVows').querySelectorAll('[data-vow-remove]').forEach(b=>b.onclick=()=>{if(confirm('Удалить обет?')){const d=dojoData();d.vows=d.vows.filter(x=>x.id!==b.dataset.vowRemove);saveExtra();renderDojo()}});
+}
+el('dojoVowAdd').onclick=()=>{const title=el('dojoVow').value.trim();if(!title)return;if(dojoData().vows.filter(x=>!x.done).length>=3){alert('Не больше трёх активных обетов одновременно.');return}dojoData().vows.push({id:'v'+Date.now(),title,done:false});el('dojoVow').value='';saveExtra();renderDojo()};
+el('trainingFormToggle').onclick=()=>{
+ const form=el('trainingFormPanel'),opening=form.hidden;form.hidden=!opening;el('trainingFormToggle').setAttribute('aria-expanded',String(opening));
+ el('trainingFormToggle').textContent=opening?'✕ Закрыть форму':'＋ Новая тренировка';
+ if(opening)form.scrollIntoView({behavior:'smooth',block:'start'});
+};
+renderDojo();
+
+// Four primary navigation buttons; secondary views live in a compact sheet.
+const moreSheet=el('moreNavSheet'),moreToggle=el('moreNavToggle');
+function closeMore(){moreSheet.hidden=true;moreToggle.setAttribute('aria-expanded','false')}
+moreToggle.onclick=()=>{moreSheet.hidden=!moreSheet.hidden;moreToggle.setAttribute('aria-expanded',String(!moreSheet.hidden))};
+el('moreNavClose').onclick=closeMore;
+document.querySelectorAll('[data-open-view]').forEach(b=>b.onclick=()=>{
+ const target=b.dataset.openView;
+ document.querySelectorAll('.section-tabs button[data-view]').forEach(x=>x.classList.remove('active'));
+ document.querySelectorAll('.extra-view').forEach(x=>x.classList.toggle('active',x.id==='view-'+target));
+ moreToggle.classList.add('active');closeMore();
+ if(target==='training')renderTraining();
+ if(target==='wisdom'){el('wisdomDay').value=state.selected;renderWisdom()}
+ if(target==='rituals'){el('ritualDay').value=state.selected;renderRituals();renderDojo()}
+ if(target==='quests')renderCustom();
+ if(target==='weight')renderWeight();
+ window.scrollTo({top:0,behavior:'smooth'});
+});
+document.querySelectorAll('.section-tabs button[data-view]').forEach(b=>b.addEventListener('click',()=>{moreToggle.classList.remove('active');closeMore()}));
+function toggleFold(btnId,panelId){
+ const btn=el(btnId),panel=el(panelId);
+ if(!btn||!panel)return;
+ btn.onclick=()=>{panel.hidden=!panel.hidden;btn.textContent=panel.hidden?'＋':'✕';btn.setAttribute('aria-expanded',String(!panel.hidden));if(!panel.hidden)panel.scrollIntoView({behavior:'smooth',block:'nearest'})};
+}
+[['trainingPlus','trainingFormPanel'],['questPlus','questFormPanel'],['wisdomPlus','wisdomFormPanel'],
+ ['vowPlus','vowFormPanel'],['diaryPlus','diaryFormPanel'],['weightPlus','weightFormPanel']].forEach(([b,p])=>toggleFold(b,p));
+const dayOptions=Array.from({length:70},(_,i)=>`<option value="${i+1}">День ${i+1}</option>`).join('');
+el('globalDayPicker').innerHTML=dayOptions;el('dojoDayPicker').innerHTML=dayOptions;
+el('globalDayPicker').onchange=()=>{state.selected=Number(el('globalDayPicker').value);save();render();renderDojo()};
+el('dojoDayPicker').onchange=()=>{state.selected=Number(el('dojoDayPicker').value);save();render();renderDojo()};
+function refreshDayPickers(){el('globalDayPicker').value=state.selected;el('dojoDayPicker').value=state.selected}
+const priorRender=render;
+render=function(){priorRender();refreshDayPickers()};
+const priorRenderExtras=renderExtras;
+renderExtras=function(){priorRenderExtras();refreshDayPickers()};
+function renderDailyRibbons(){
+ const n=state.selected;
+ el('dailyMessageRibbon').textContent=affirmations[(n-1)%affirmations.length];
+ const available=(extra.customQuests||[]).filter(q=>!q.done&&Number(q.day)<=n).sort((a,b)=>Number(a.day)-Number(b.day));
+ const q=available[0];
+ el('dailySideQuestRibbon').textContent=q?`${q.name} · +${q.xp} XP`:dailyQuests[n-1]+' · +10 XP';
+}
+const oldRenderExtrasForRibbons=renderExtras;
+renderExtras=function(){oldRenderExtrasForRibbons();renderDailyRibbons()};
+const oldSaveDiary=el('saveDiary').onclick;
+el('saveDiary').onclick=()=>{oldSaveDiary();el('diaryFormPanel').hidden=true;el('diaryPlus').setAttribute('aria-expanded','false');el('diaryPlus').textContent='＋'};
+const oldSaveWeight=el('weightSave').onclick;
+el('weightSave').onclick=()=>{oldSaveWeight();if(el('weightMessage').textContent.startsWith('✓')){el('weightFormPanel').hidden=true;el('weightPlus').setAttribute('aria-expanded','false');el('weightPlus').textContent='＋'}};
+const oldSaveQuest=el('addCustomQuest').onclick;
+el('addCustomQuest').onclick=()=>{const count=extra.customQuests.length;oldSaveQuest();if(extra.customQuests.length>count){el('questFormPanel').hidden=true;el('questPlus').setAttribute('aria-expanded','false');el('questPlus').textContent='＋'}};
+const oldSaveWisdom=el('saveWisdom').onclick;
+el('saveWisdom').onclick=()=>{oldSaveWisdom();el('wisdomFormPanel').hidden=true;el('wisdomPlus').setAttribute('aria-expanded','false');el('wisdomPlus').textContent='＋'};
+const oldVowAdd=el('dojoVowAdd').onclick;
+el('dojoVowAdd').onclick=()=>{const count=dojoData().vows.length;oldVowAdd();if(dojoData().vows.length>count){el('vowFormPanel').hidden=true;el('vowPlus').setAttribute('aria-expanded','false');el('vowPlus').textContent='＋'}};
+el('trainingType').addEventListener('change',()=>{el('strengthBuilder').hidden=el('trainingType').value!=='Силовая'});
+el('strengthBuilder').hidden=el('trainingType').value!=='Силовая';
+renderDailyRibbons();refreshDayPickers();
 // Cloud sync is opt-in; local storage and JSON export remain available.
 const CLOUD_URL='https://oonpbtwjlvwgpaibehdx.supabase.co', CLOUD_KEY='sb_publishable_zrWVwH5DkkmDgH8wgwLAmA_DDt0UR-Y';
 let cloudClient=null,cloudUser=null,cloudTimer=null,cloudBusy=false,cloudHydrating=false,cloudReady=false,cloudDirty=false,cloudKnownVersion=null;
@@ -467,7 +922,7 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape'&&cloudUser)cloudComp
 const cloudMiniNode=el('cloudMini');cloudMiniNode.remove();document.querySelector('.sticky-progress').prepend(cloudMiniNode);
 try{const tg=window.Telegram?.WebApp;if(tg){tg.ready();tg.expand();if(typeof tg.disableVerticalSwipes==='function')tg.disableVerticalSwipes();}}catch(e){}
 const cloudSnapshot=()=>({app:'warrior70',version:3,days:state.days,quests:state.quests,selected:state.selected,extra});
-const hasLocalProgress=()=>Object.keys(state.days).length>0||Object.keys(state.quests).length>0||extra.trainings.length>0||extra.customQuests.length>0||Object.keys(extra.answers).length>0||extra.diary.length>0;
+const hasLocalProgress=()=>Object.keys(state.days).length>0||Object.keys(state.quests).length>0||extra.trainings.length>0||extra.customQuests.length>0||Object.keys(extra.answers).length>0||extra.diary.length>0||(extra.weights||[]).length>0;
 function scheduleCloudSave(){
  if(cloudHydrating||!cloudUser||!cloudReady)return;
  cloudDirty=true;cloudStatus('Есть изменения — сохраняем…');clearTimeout(cloudTimer);
@@ -482,8 +937,11 @@ function applyCloudSnapshot(data){
  try{
  state={days:data.days,quests:data.quests||{},selected:Math.max(1,Math.min(70,Number(data.selected)||1))};
  const x=data.extra||{};
- extra={trainings:x.trainings||[],customQuests:x.customQuests||[],answers:x.answers||{},rituals:x.rituals||{},customRituals:x.customRituals||[],diary:x.diary||[],dailyOverrides:x.dailyOverrides||{}};
- persistCloudLocal();render();renderCustom();renderTraining();renderWisdom();renderRituals();renderDiary();renderRitualEditor();refreshXp();
+ extra={trainings:x.trainings||[],customQuests:x.customQuests||[],answers:x.answers||{},rituals:x.rituals||{},customRituals:x.customRituals||[],diary:x.diary||[],dailyOverrides:x.dailyOverrides||{},weights:x.weights||[],dojo:x.dojo||{practices:{},vows:[]}};
+ persistCloudLocal();render();renderCustom();renderTraining();renderWisdom();renderRituals();renderDiary();renderRitualEditor();renderWeight();
+
+
+renderDojo();refreshXp();
  }finally{cloudHydrating=false}
 }
 async function cloudFetch(){
@@ -541,7 +999,10 @@ async function cloudAuthAction(signup){
  }catch(e){cloudStatus('Ошибка входа: '+e.message,'warn')}
 }
 async function cloudInit(){
- if(!window.supabase?.createClient){cloudStatus('Не удалось загрузить Supabase. Проверь интернет.','warn');return}
+ if(!window.supabase?.createClient){
+  cloudStatus('Библиотека Supabase не загрузилась. Проверь подключение к интернету и обнови страницу.','warn');
+  return;
+ }
  try{
  cloudClient=window.supabase.createClient(CLOUD_URL,CLOUD_KEY,{auth:{persistSession:true,autoRefreshToken:true,detectSessionInUrl:true}});
  el('cloudLogin').onclick=()=>cloudAuthAction(false);
@@ -553,6 +1014,9 @@ async function cloudInit(){
  cloudClient.auth.onAuthStateChange((event,session)=>{if(event==='SIGNED_OUT'){cloudUser=null;cloudReady=false;el('cloudAuth').hidden=false;el('cloudSigned').hidden=true;cloudCompact(false);document.body.classList.add('auth-locked');cloudStatus('Войди для синхронизации')}});
  }catch(e){cloudStatus('Ошибка инициализации: '+e.message,'warn')}
 }
+// Bind login immediately, even if the Supabase SDK has not finished loading.
+el('cloudLogin').onclick=()=>cloudAuthAction(false);
+el('cloudSignup').onclick=()=>cloudAuthAction(true);
 cloudInit();
 // Recheck cloud after returning from another device, without replacing unsaved local edits.
 document.addEventListener('visibilitychange',async()=>{if(document.visibilityState!=='visible'||!cloudUser||!cloudReady||cloudDirty||cloudBusy)return;try{const remote=await cloudFetch();if(remote&&remote.updated_at!==cloudKnownVersion){cloudReady=false;cloudStatus('В облаке появилась новая версия. Открой настройки и загрузи её.','warn')}}catch(e){cloudStatus('Проверка облака: '+e.message,'warn')}});
