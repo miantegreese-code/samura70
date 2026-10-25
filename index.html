@@ -292,6 +292,22 @@ body.auth-locked #cloudPanel{background:linear-gradient(140deg,#12364b,#1c2c43)}
 .sakura-cat{filter:drop-shadow(0 2px 3px #030f1c)}
 .sakura-branch{opacity:.9}
 @media(max-width:750px){.section-tabs{padding:8px 8px calc(8px + env(safe-area-inset-bottom,0px))!important}.section-tabs button{font-size:11px!important;padding:9px 3px!important}.more-nav-sheet{bottom:calc(76px + env(safe-area-inset-bottom,0px))}}
+
+/* Cloud restore choice: accessible, theme-matched, and explicit about overwrites */
+.cloud-choice-backdrop[hidden]{display:none!important}
+.cloud-choice-backdrop{position:fixed;inset:0;z-index:9999;background:rgba(2,11,21,.84);display:grid;place-items:center;padding:16px;backdrop-filter:blur(6px)}
+.cloud-choice-card{width:min(100%,520px);max-height:min(90vh,750px);overflow:auto;padding:clamp(22px,4vw,32px);border:1px solid #bd907c;border-radius:23px;background:linear-gradient(145deg,#173548,#182c43 62%,#352c45);box-shadow:0 20px 70px #0009;color:#f5e9db}
+.cloud-choice-card h2{font-size:clamp(23px,5vw,32px);line-height:1.2;margin:8px 0 12px;color:#ffdb9d}
+.cloud-choice-card p{line-height:1.55;color:#d6dfe0}
+.cloud-choice-symbol{font-size:30px;letter-spacing:7px}
+.cloud-choice-info{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:20px 0}
+.cloud-choice-info>div{background:#0e2739;border:1px solid #466675;border-radius:13px;padding:13px;display:flex;flex-direction:column;gap:7px}
+.cloud-choice-info span{font-size:12px;color:#aac5cc}.cloud-choice-info strong{font-size:14px;color:#f5d4a6}
+.cloud-choice-card .cloud-choice-warning{font-size:13px;color:#f4c5c9}
+.cloud-choice-actions{display:grid;gap:9px;margin-top:18px}
+.cloud-choice-actions button{width:100%;min-height:43px}
+.cloud-choice-actions button:focus-visible{outline:3px solid #f8d49b;outline-offset:2px}
+@media(max-width:420px){.cloud-choice-info{grid-template-columns:1fr}}
 </style></head><body class="auth-locked"><main><header class="hero"><div><div class="eyebrow">Личный журнал дисциплины</div><h1>⚔ Путь самурая</h1><p>70 дней · 26 октября 2026 — 3 января 2027<br/>«Не совершенство. Возвращение к пути».</p></div><div aria-hidden="true" class="hero-art"><svg viewbox="0 0 240 190" xmlns="http://www.w3.org/2000/svg">
 <defs><radialgradient id="lanternLight"><stop stop-color="#ffcf79" stop-opacity=".8"></stop><stop offset="1" stop-color="#ffcf79" stop-opacity="0"></stop></radialgradient><lineargradient id="lanternBody" x1="0" x2="1"><stop stop-color="#dc635e"></stop><stop offset=".5" stop-color="#ffd08a"></stop><stop offset="1" stop-color="#e77e66"></stop></lineargradient></defs>
 <circle cx="156" cy="60" fill="url(#lanternLight)" r="78"></circle>
@@ -350,8 +366,24 @@ body.auth-locked #cloudPanel{background:linear-gradient(140deg,#12364b,#1c2c43)}
 </div></div>
 </div>
 <div class="extra-view" id="view-diary"><div class="mystic-head"><div class="row section-title-row"><h2>📝 Дневник путешественницы</h2><button aria-expanded="false" aria-label="Добавить запись" class="icon-btn plus-btn" id="diaryPlus" title="Добавить запись" type="button">＋</button></div><p class="section-subtitle">Свободные записи о любом событии, мысли или впечатлении. Можно редактировать и удалять.</p></div><div class="layout"><div class="panel"><h2>Мои записи</h2><div id="diaryList"></div></div><div class="panel" hidden="" id="diaryFormPanel"><h2>Новая запись</h2><div class="field"><label>День путешествия</label><select id="diaryDay"></select></div><div class="field"><label>Заголовок</label><input id="diaryTitle" maxlength="120" placeholder="Мой день" type="text"/></div><div class="field"><label>Запись</label><textarea id="diaryBody" placeholder="О чём хочется рассказать сегодня?" style="min-height:200px"></textarea></div><div class="buttons"><button class="pill primary" id="saveDiary">Сохранить запись</button><button class="pill" id="cancelDiary" style="display:none">Отменить изменения</button></div></div></div></div>
-</main><div aria-hidden="true" class="cloud-backdrop" id="cloudBackdrop"></div><script src="https://telegram.org/js/telegram-web-app.js"></script><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script><script>
-(()=>{'use strict';const KEY='warrior70_v1';const START=Date.UTC(2026,9,26);const levels=[{at:0,name:'Ученик',icon:'🌱',desc:'Принять решение и начать'},{at:7,name:'Искатель',icon:'🥾',desc:'Первый рубеж — семь дней'},{at:14,name:'Странник',icon:'🗺️',desc:'Пройти дальше прежней границы'},{at:21,name:'Страж',icon:'🛡️',desc:'Три недели возвращений'},{at:35,name:'Воин',icon:'⚔️',desc:'Половина пути'},{at:49,name:'Наставник',icon:'🏯',desc:'Семь недель последовательности'},{at:63,name:'Мастер стойкости',icon:'🐉',desc:'Девять недель пути'},{at:70,name:'Хранитель пути',icon:'👑',desc:'Все семьдесят дней пройдены'}];const quests=[['Подготовка','Подготовь продукты и форму на следующий день.'],['Испытание восьмого дня','На 8-й день выполни посильный план без попытки вернуть первоначальный энтузиазм.'],['Искусство простоты','Подготовь три быстрых варианта полноценного ужина.'],['Тихая дисциплина','Один день следуй расписанию, не добавляя лишних задач.'],['Половина пути','Запиши три навыка, которые улучшились за 35 дней.'],['Мудрость восстановления','Выдели время для восстановления и не компенсируй отдых.'],['Верность решению','Вспомни сложный день, после которого ты продолжила.'],['Проверка курса','Оцени, хватает ли тебе питания, сна и отдыха.'],['Перед финишем','Составь реалистичный план после 70-го дня.'],['Завершение похода','Напиши письмо себе о том, чему научилась.']];const items=[['food','🥗 Питание','Сбалансированные приёмы пищи, гибкий ориентир калорий'],['movement','🚶 Ходьба','Посильная активность без компенсации'],['training','🏋️ Тренировка / отдых','Выполнен плановый бег, силовая или восстановление'],['sleep','🌙 Сон','Цель — более 7 часов']];let state={days:{},quests:{},selected:1};try{const v=JSON.parse(localStorage.getItem(KEY));if(v&&typeof v==='object'){state={days:v.days||{},quests:v.quests||{},selected:Math.max(1,Math.min(70,Number(v.selected)||1))}}}catch(e){}const el=id=>document.getElementById(id);const entry=n=>state.days[n]||{};const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(state))}catch(e){}scheduleCloudSave()};const marked=()=>Object.values(state.days).filter(x=>x.status==='complete'||x.status==='return').length;const date=n=>new Date(START+(n-1)*86400000).toLocaleDateString('ru-RU',{day:'numeric',month:'long',year:'numeric',timeZone:'UTC'});function xp(){let x=0;Object.values(state.days).forEach(d=>{if(d.status)x+=20;if(d.dailyQuest)x+=10;items.forEach(i=>{if(d[i[0]])x+=5})});Object.values(state.quests).forEach(v=>{if(v)x+=30});return x}function render(){const total=marked(),currentRank=[...levels].reverse().find(l=>total>=l.at);el('daysDone').textContent=total+' / 70';el('xp').textContent=xp()+' XP';el('rank').textContent=currentRank.name;el('progress').style.width=(total/70*100)+'%';el('calendar').innerHTML=Array.from({length:70},(_,i)=>{const n=i+1,d=entry(n);return `<button class="day ${d.status==='complete'?'done':d.status==='return'?'return':''} ${state.selected===n?'selected':''}" data-day="${n}" aria-label="День ${n}, ${date(n)}">${n}</button>`}).join('');el('calendar').querySelectorAll('button').forEach(b=>b.onclick=()=>{state.selected=+b.dataset.day;save();render()});el('dayTitle').textContent='День '+state.selected;el('date').textContent=date(state.selected)+' · неделя '+Math.ceil(state.selected/7);el('prev').disabled=state.selected===1;el('next').disabled=state.selected===70;const d=entry(state.selected);el('checks').innerHTML=items.map(([key,title,desc])=>`<label class="check"><input type="checkbox" data-check="${key}" ${d[key]?'checked':''}><span><b>${title}</b><small>${desc}</small></span></label>`).join('');el('checks').querySelectorAll('input').forEach(c=>c.onchange=()=>update({[c.dataset.check]:c.checked}));el('steps').value=d.steps??'';el('journal').value=d.note??'';el('complete').style.opacity=d.status==='complete'?'1':'.8';el('returned').style.opacity=d.status==='return'?'1':'.8';el('message').textContent=state.selected===8?'⚔ Испытание восьмого дня: продолжи без необходимости чувствовать вдохновение.':total===70?'👑 Путь завершён. Теперь сохрани то, чему научилась.':total>=14?'Ты уже прошла прежний рубеж. Продолжай спокойно и последовательно.':'Путь не требует идеальности. Каждый возврат — часть мастерства.';el('levels').innerHTML=levels.map(l=>`<div class="level"><div class="medal">${total>=l.at?l.icon:'🔒'}</div><div style="flex:1"><b>${l.name}</b><small>${l.desc}</small></div><span class="tag">${total>=l.at?'ОТКРЫТО':l.at+' ДНЕЙ'}</span></div>`).join('');el('quests').innerHTML=quests.map(([title,desc],i)=>`<div class="quest"><div class="row"><b>Неделя ${i+1}: ${title}</b><span class="tag">+30 XP</span></div><p>${desc}</p><button class="pill ${state.quests[i]?'primary':''}" data-quest="${i}">${state.quests[i]?'✓ Выполнено':'Отметить выполнение'}</button></div>`).join('');el('quests').querySelectorAll('button').forEach(b=>b.onclick=()=>{const k=b.dataset.quest;state.quests[k]=!state.quests[k];save();render()});renderExtras()}function update(p){state.days[state.selected]={...entry(state.selected),...p};save();render()}el('prev').onclick=()=>{state.selected--;save();render()};el('next').onclick=()=>{state.selected++;save();render()};el('complete').onclick=()=>update({status:'complete'});el('returned').onclick=()=>update({status:'return'});el('clearStatus').onclick=()=>update({status:null});el('steps').onchange=e=>update({steps:e.target.value===''?null:Math.max(0,Number(e.target.value))});el('journal').oninput=e=>{state.days[state.selected]={...entry(state.selected),note:e.target.value};save()};el('export').onclick=()=>{const blob=new Blob([JSON.stringify({app:'warrior70',version:1,exported:new Date().toISOString(),...state},null,2)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='put_voina_progress.json';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),2000)};el('import').onchange=async e=>{const file=e.target.files[0];if(!file)return;try{const d=JSON.parse(await file.text());if(d.app!=='warrior70'||!d.days||typeof d.days!=='object')throw Error('Неверный формат');if(confirm('Заменить текущий прогресс данными из файла?')){state={days:d.days,quests:d.quests||{},selected:Math.max(1,Math.min(70,Number(d.selected)||1))};save();render()}}catch(err){alert('Не удалось загрузить файл прогресса.')}e.target.value=''};el('reset').onclick=()=>{if(confirm('Удалить весь прогресс? Рекомендуем сначала сохранить резервную копию.')){state={days:{},quests:{},selected:1};save();render()}};
+</main><div aria-hidden="true" class="cloud-backdrop" id="cloudBackdrop"></div><div class="cloud-choice-backdrop" hidden="" id="cloudChoiceModal" role="presentation">
+<section aria-describedby="cloudChoiceDescription" aria-labelledby="cloudChoiceTitle" aria-modal="true" class="cloud-choice-card" role="dialog" tabindex="-1">
+<div aria-hidden="true" class="cloud-choice-symbol">☁️ ✦ 🏮</div>
+<h2 id="cloudChoiceTitle">Продолжить путешествие?</h2>
+<p id="cloudChoiceDescription">В облаке найден твой прогресс. Выбери, какую версию использовать.</p>
+<div class="cloud-choice-info"><div><span>☁️ Облачная версия</span><strong id="cloudChoiceDate">Дата неизвестна</strong></div><div><span>📜 Прогресс в браузере</span><strong id="cloudChoiceLocal">Есть локальные записи</strong></div></div>
+<p class="cloud-choice-warning">Загрузка из облака заменит локальные записи. Если здесь есть новые данные, сначала скачай резервную копию.</p>
+<div class="cloud-choice-actions">
+<button class="pill primary" id="cloudChoiceLoad" type="button">☁️ Загрузить из облака</button>
+<button class="pill" id="cloudChoiceBackup" type="button">↓ Сохранить JSON</button>
+<button class="pill" id="cloudChoiceKeep" type="button">Оставить локальные</button>
+</div>
+</section>
+</div>
+<script src="https://telegram.org/js/telegram-web-app.js"></script><script>
+(()=>{'use strict';
+window.addEventListener('error',e=>{const n=document.getElementById('cloudStatus');if(n&&n.textContent.includes('Подключаем'))n.textContent='Ошибка интерфейса: '+e.message});
+const KEY='warrior70_v1';const START=Date.UTC(2026,9,26);const levels=[{at:0,name:'Ученик',icon:'🌱',desc:'Принять решение и начать'},{at:7,name:'Искатель',icon:'🥾',desc:'Первый рубеж — семь дней'},{at:14,name:'Странник',icon:'🗺️',desc:'Пройти дальше прежней границы'},{at:21,name:'Страж',icon:'🛡️',desc:'Три недели возвращений'},{at:35,name:'Воин',icon:'⚔️',desc:'Половина пути'},{at:49,name:'Наставник',icon:'🏯',desc:'Семь недель последовательности'},{at:63,name:'Мастер стойкости',icon:'🐉',desc:'Девять недель пути'},{at:70,name:'Хранитель пути',icon:'👑',desc:'Все семьдесят дней пройдены'}];const quests=[['Подготовка','Подготовь продукты и форму на следующий день.'],['Испытание восьмого дня','На 8-й день выполни посильный план без попытки вернуть первоначальный энтузиазм.'],['Искусство простоты','Подготовь три быстрых варианта полноценного ужина.'],['Тихая дисциплина','Один день следуй расписанию, не добавляя лишних задач.'],['Половина пути','Запиши три навыка, которые улучшились за 35 дней.'],['Мудрость восстановления','Выдели время для восстановления и не компенсируй отдых.'],['Верность решению','Вспомни сложный день, после которого ты продолжила.'],['Проверка курса','Оцени, хватает ли тебе питания, сна и отдыха.'],['Перед финишем','Составь реалистичный план после 70-го дня.'],['Завершение похода','Напиши письмо себе о том, чему научилась.']];const items=[['food','🥗 Питание','Сбалансированные приёмы пищи, гибкий ориентир калорий'],['movement','🚶 Ходьба','Посильная активность без компенсации'],['training','🏋️ Тренировка / отдых','Выполнен плановый бег, силовая или восстановление'],['sleep','🌙 Сон','Цель — более 7 часов']];let state={days:{},quests:{},selected:1};try{const v=JSON.parse(localStorage.getItem(KEY));if(v&&typeof v==='object'){state={days:v.days||{},quests:v.quests||{},selected:Math.max(1,Math.min(70,Number(v.selected)||1))}}}catch(e){}const el=id=>document.getElementById(id);const entry=n=>state.days[n]||{};const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(state))}catch(e){}scheduleCloudSave()};const marked=()=>Object.values(state.days).filter(x=>x.status==='complete'||x.status==='return').length;const date=n=>new Date(START+(n-1)*86400000).toLocaleDateString('ru-RU',{day:'numeric',month:'long',year:'numeric',timeZone:'UTC'});function xp(){let x=0;Object.values(state.days).forEach(d=>{if(d.status)x+=20;if(d.dailyQuest)x+=10;items.forEach(i=>{if(d[i[0]])x+=5})});Object.values(state.quests).forEach(v=>{if(v)x+=30});return x}function render(){const total=marked(),currentRank=[...levels].reverse().find(l=>total>=l.at);el('daysDone').textContent=total+' / 70';el('xp').textContent=xp()+' XP';el('rank').textContent=currentRank.name;el('progress').style.width=(total/70*100)+'%';el('calendar').innerHTML=Array.from({length:70},(_,i)=>{const n=i+1,d=entry(n);return `<button class="day ${d.status==='complete'?'done':d.status==='return'?'return':''} ${state.selected===n?'selected':''}" data-day="${n}" aria-label="День ${n}, ${date(n)}">${n}</button>`}).join('');el('calendar').querySelectorAll('button').forEach(b=>b.onclick=()=>{state.selected=+b.dataset.day;save();render()});el('dayTitle').textContent='День '+state.selected;el('date').textContent=date(state.selected)+' · неделя '+Math.ceil(state.selected/7);el('prev').disabled=state.selected===1;el('next').disabled=state.selected===70;const d=entry(state.selected);el('checks').innerHTML=items.map(([key,title,desc])=>`<label class="check"><input type="checkbox" data-check="${key}" ${d[key]?'checked':''}><span><b>${title}</b><small>${desc}</small></span></label>`).join('');el('checks').querySelectorAll('input').forEach(c=>c.onchange=()=>update({[c.dataset.check]:c.checked}));el('steps').value=d.steps??'';el('journal').value=d.note??'';el('complete').style.opacity=d.status==='complete'?'1':'.8';el('returned').style.opacity=d.status==='return'?'1':'.8';el('message').textContent=state.selected===8?'⚔ Испытание восьмого дня: продолжи без необходимости чувствовать вдохновение.':total===70?'👑 Путь завершён. Теперь сохрани то, чему научилась.':total>=14?'Ты уже прошла прежний рубеж. Продолжай спокойно и последовательно.':'Путь не требует идеальности. Каждый возврат — часть мастерства.';el('levels').innerHTML=levels.map(l=>`<div class="level"><div class="medal">${total>=l.at?l.icon:'🔒'}</div><div style="flex:1"><b>${l.name}</b><small>${l.desc}</small></div><span class="tag">${total>=l.at?'ОТКРЫТО':l.at+' ДНЕЙ'}</span></div>`).join('');el('quests').innerHTML=quests.map(([title,desc],i)=>`<div class="quest"><div class="row"><b>Неделя ${i+1}: ${title}</b><span class="tag">+30 XP</span></div><p>${desc}</p><button class="pill ${state.quests[i]?'primary':''}" data-quest="${i}">${state.quests[i]?'✓ Выполнено':'Отметить выполнение'}</button></div>`).join('');el('quests').querySelectorAll('button').forEach(b=>b.onclick=()=>{const k=b.dataset.quest;state.quests[k]=!state.quests[k];save();render()});renderExtras()}function update(p){state.days[state.selected]={...entry(state.selected),...p};save();render()}el('prev').onclick=()=>{state.selected--;save();render()};el('next').onclick=()=>{state.selected++;save();render()};el('complete').onclick=()=>update({status:'complete'});el('returned').onclick=()=>update({status:'return'});el('clearStatus').onclick=()=>update({status:null});el('steps').onchange=e=>update({steps:e.target.value===''?null:Math.max(0,Number(e.target.value))});el('journal').oninput=e=>{state.days[state.selected]={...entry(state.selected),note:e.target.value};save()};el('export').onclick=()=>{const blob=new Blob([JSON.stringify({app:'warrior70',version:1,exported:new Date().toISOString(),...state},null,2)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='put_voina_progress.json';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),2000)};el('import').onchange=async e=>{const file=e.target.files[0];if(!file)return;try{const d=JSON.parse(await file.text());if(d.app!=='warrior70'||!d.days||typeof d.days!=='object')throw Error('Неверный формат');if(confirm('Заменить текущий прогресс данными из файла?')){state={days:d.days,quests:d.quests||{},selected:Math.max(1,Math.min(70,Number(d.selected)||1))};save();render()}}catch(err){alert('Не удалось загрузить файл прогресса.')}e.target.value=''};el('reset').onclick=()=>{if(confirm('Удалить весь прогресс? Рекомендуем сначала сохранить резервную копию.')){state={days:{},quests:{},selected:1};save();render()}};
 const affirmations=[
 'Мой путь складывается из маленьких действий.',
 'Я выбираю постоянство, а не совершенство.',
@@ -745,7 +777,7 @@ function renderDiary(){
 
 el('saveDiary').onclick=()=>{const body=el('diaryBody').value.trim();if(!body)return alert('Напиши текст записи');const d={id:editingDiary||uid(),day:Number(el('diaryDay').value),title:el('diaryTitle').value.trim(),body};const old=extra.diary.find(x=>x.id===editingDiary);if(old)Object.assign(old,d);else extra.diary.push(d);saveExtra();el('cancelDiary').click();renderDiary()};
 el('cancelDiary').onclick=()=>{editingDiary=null;el('diaryTitle').value='';el('diaryBody').value='';el('saveDiary').textContent='Сохранить запись';el('cancelDiary').style.display='none'};
-document.querySelector('[data-view="diary"]').addEventListener('click',()=>{el('diaryDay').value=state.selected;renderDiary()});
+// Diary is opened through the 'More' navigation; its handler is registered below.
 renderDiary();renderRitualEditor();renderStrength();
 
 
@@ -963,21 +995,71 @@ async function cloudSave(force=false){
    cloudKnownVersion=data.updated_at;cloudDirty=false;cloudStatus('✓ Сохранено в облаке','good');
  }catch(e){cloudStatus('Не удалось сохранить: '+e.message,'warn');throw e}finally{cloudBusy=false}
 }
+
+function cloudChoiceDialog(remote){
+ return new Promise(resolve=>{
+  const modal=el('cloudChoiceModal'),card=modal.querySelector('.cloud-choice-card');
+  const load=el('cloudChoiceLoad'),keep=el('cloudChoiceKeep'),backup=el('cloudChoiceBackup');
+  const previous=document.activeElement;
+  const date=remote.updated_at?new Date(remote.updated_at):null;
+  el('cloudChoiceDate').textContent=date&&!isNaN(date.getTime())?date.toLocaleString('ru-RU'):'Дата неизвестна';
+  el('cloudChoiceLocal').textContent=hasLocalProgress()?'Есть записи':'Нет записей';
+  let finished=false;
+  function finish(value){
+   if(finished)return;
+   finished=true;modal.hidden=true;
+   load.removeEventListener('click',onLoad);keep.removeEventListener('click',onKeep);
+   backup.removeEventListener('click',onBackup);modal.removeEventListener('keydown',onKey);
+   if(previous?.focus)previous.focus();
+   resolve(value);
+  }
+  const onLoad=()=>finish('cloud'),onKeep=()=>finish('local');
+  const onBackup=()=>{
+   // Download the same app JSON snapshot without altering either version.
+   const payload=JSON.stringify(cloudSnapshot(),null,2);
+   const url=URL.createObjectURL(new Blob([payload],{type:'application/json'}));
+   const a=document.createElement('a');a.href=url;a.download='samurai70-local-backup-'+new Date().toISOString().slice(0,10)+'.json';
+   document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),2000);
+   cloudStatus('Резервная копия скачана. Теперь выбери версию прогресса.','good');
+  };
+  const onKey=e=>{
+   if(e.key==='Escape'){e.preventDefault();finish('local')}
+   if(e.key==='Tab'){
+    const controls=[load,backup,keep];
+    const idx=controls.indexOf(document.activeElement);
+    if(e.shiftKey&&idx===0){e.preventDefault();keep.focus()}
+    else if(!e.shiftKey&&idx===controls.length-1){e.preventDefault();load.focus()}
+   }
+  };
+  load.addEventListener('click',onLoad);keep.addEventListener('click',onKeep);
+  backup.addEventListener('click',onBackup);modal.addEventListener('keydown',onKey);
+  modal.hidden=false;load.focus();
+ });
+}
+
+let cloudConnectSequence=0;
 async function cloudConnectUser(user){
+ const sequence=++cloudConnectSequence;
  clearTimeout(cloudTimer);cloudUser=user;cloudReady=false;cloudDirty=false;cloudKnownVersion=null;
  document.body.classList.toggle('auth-locked',!user);el('cloudAuth').hidden=!!user;el('cloudSigned').hidden=!user;cloudCompact(!!user);
- if(!user){el('cloudAccount').textContent='';cloudStatus('Войди для синхронизации');return}
+ if(!user){el('cloudChoiceModal').hidden=true;el('cloudAccount').textContent='';cloudStatus('Войди для синхронизации');return}
  el('cloudAccount').textContent='👤 '+(user.email||'Аккаунт');cloudStatus('Проверяем облачное сохранение…');
  try{
    const remote=await cloudFetch();
+   if(sequence!==cloudConnectSequence)return;
    if(remote&&remote.progress&&remote.progress.app==='warrior70'){
       cloudKnownVersion=remote.updated_at;
-      if(hasLocalProgress()){
-        // Existing browser data must not be silently discarded.
-        const useCloud=confirm('Найдено сохранение в облаке. Загрузить его в этот браузер? Текущие локальные записи будут заменены. Если здесь есть новые записи, сначала нажми «Отмена» и экспортируй JSON.');
-        if(useCloud){applyCloudSnapshot(remote.progress);cloudReady=true;cloudStatus('✓ Прогресс загружен из облака','good')}
-        else{cloudStatus('Локальные записи сохранены. Экспортируй JSON, затем выбери «Загрузить из облака» или «Сохранить в облако».','warn')}
-      }else{applyCloudSnapshot(remote.progress);cloudReady=true;cloudStatus('✓ Прогресс загружен из облака','good')}
+      // Always ask before loading an existing cloud save, including a new browser.
+      const useCloud=(await cloudChoiceDialog(remote))==='cloud';
+      if(sequence!==cloudConnectSequence)return;
+      if(useCloud){
+        applyCloudSnapshot(remote.progress);
+        cloudReady=true;cloudDirty=false;
+        cloudStatus('✓ Прогресс загружен из облака','good');
+      }else{
+        cloudReady=false;
+        cloudStatus('Локальная версия оставлена. Автосохранение в облако приостановлено, чтобы не перезаписать его.','warn');
+      }
    }else{
      if(hasLocalProgress()){
        if(confirm('В облаке пока нет сохранения. Перенести туда текущий прогресс этого браузера? Сначала рекомендуется экспортировать JSON.')){cloudReady=true;await cloudSave(true)}
@@ -998,8 +1080,29 @@ async function cloudAuthAction(signup){
    else if(data.user)await cloudConnectUser(data.user);
  }catch(e){cloudStatus('Ошибка входа: '+e.message,'warn')}
 }
+async function ensureSupabaseLibrary(){
+ if(window.supabase?.createClient)return true;
+ const sources=[
+  'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js',
+  'https://unpkg.com/@supabase/supabase-js@2/dist/umd/supabase.js'
+ ];
+ for(const src of sources){
+  cloudStatus('Подключаем Supabase…');
+  try{
+   await new Promise((resolve,reject)=>{
+    const tag=document.createElement('script');tag.src=src;tag.async=true;
+    const timer=setTimeout(()=>{tag.remove();reject(new Error('Превышено время ожидания библиотеки'))},6500);
+    tag.onload=()=>{clearTimeout(timer);resolve()};
+    tag.onerror=()=>{clearTimeout(timer);tag.remove();reject(new Error('Не удалось загрузить библиотеку'))};
+    document.head.appendChild(tag);
+   });
+   if(window.supabase?.createClient)return true;
+  }catch(e){console.warn('Supabase CDN:',e.message)}
+ }
+ return false;
+}
 async function cloudInit(){
- if(!window.supabase?.createClient){
+ if(!await ensureSupabaseLibrary()){
   cloudStatus('Библиотека Supabase не загрузилась. Проверь подключение к интернету и обнови страницу.','warn');
   return;
  }
@@ -1008,18 +1111,22 @@ async function cloudInit(){
  el('cloudLogin').onclick=()=>cloudAuthAction(false);
  el('cloudSignup').onclick=()=>cloudAuthAction(true);
  el('cloudLogout').onclick=async()=>{if(cloudDirty&&!confirm('Есть несохранённые изменения. Всё равно выйти?'))return;const {error}=await cloudClient.auth.signOut();if(error)cloudStatus(error.message,'warn');else await cloudConnectUser(null)};
- el('cloudPull').onclick=async()=>{if(!confirm('Заменить локальные данные сохранением из облака? Сначала экспортируй JSON, если есть несохранённые записи.'))return;try{const remote=await cloudFetch();if(!remote)throw Error('В облаке ещё нет сохранения');applyCloudSnapshot(remote.progress);cloudKnownVersion=remote.updated_at;cloudReady=true;cloudDirty=false;cloudStatus('✓ Загружено из облака','good')}catch(e){cloudStatus(e.message,'warn')}};
+ el('cloudPull').onclick=async()=>{try{const remote=await cloudFetch();if(!remote||!remote.progress)throw Error('В облаке ещё нет сохранения');if((await cloudChoiceDialog(remote))!=='cloud')return;applyCloudSnapshot(remote.progress);cloudKnownVersion=remote.updated_at;cloudReady=true;cloudDirty=false;cloudStatus('✓ Загружено из облака','good')}catch(e){cloudStatus(e.message,'warn')}};
  el('cloudPush').onclick=async()=>{if(!confirm('Заменить облачное сохранение текущими данными этого браузера? Если на другом устройстве есть более свежие записи, они будут перезаписаны.'))return;cloudReady=true;await cloudSave(true).catch(()=>{})};
- const {data,error}=await cloudClient.auth.getUser();if(error||!data.user)await cloudConnectUser(null);else await cloudConnectUser(data.user);
+ const initialAuth=await Promise.race([
+ cloudClient.auth.getSession(),
+ new Promise((_,reject)=>setTimeout(()=>reject(new Error('Тайм-аут проверки сессии')),9000))
+]);
+if(initialAuth.error||!initialAuth.data?.session?.user)await cloudConnectUser(null);
+else await cloudConnectUser(initialAuth.data.session.user);
  cloudClient.auth.onAuthStateChange((event,session)=>{if(event==='SIGNED_OUT'){cloudUser=null;cloudReady=false;el('cloudAuth').hidden=false;el('cloudSigned').hidden=true;cloudCompact(false);document.body.classList.add('auth-locked');cloudStatus('Войди для синхронизации')}});
- }catch(e){cloudStatus('Ошибка инициализации: '+e.message,'warn')}
+ }catch(e){cloudStatus('Ошибка инициализации: '+e.message+'. Попробуй войти вручную.','warn')}
 }
-// Bind login immediately, even if the Supabase SDK has not finished loading.
 el('cloudLogin').onclick=()=>cloudAuthAction(false);
 el('cloudSignup').onclick=()=>cloudAuthAction(true);
 cloudInit();
 // Recheck cloud after returning from another device, without replacing unsaved local edits.
-document.addEventListener('visibilitychange',async()=>{if(document.visibilityState!=='visible'||!cloudUser||!cloudReady||cloudDirty||cloudBusy)return;try{const remote=await cloudFetch();if(remote&&remote.updated_at!==cloudKnownVersion){cloudReady=false;cloudStatus('В облаке появилась новая версия. Открой настройки и загрузи её.','warn')}}catch(e){cloudStatus('Проверка облака: '+e.message,'warn')}});
+document.addEventListener('visibilitychange',async()=>{if(document.visibilityState!=='visible'||!cloudUser||!cloudReady||cloudDirty||cloudBusy)return;try{const remote=await cloudFetch();if(remote&&remote.updated_at!==cloudKnownVersion){cloudReady=false;cloudStatus('В облаке появилась новая версия. Выбери, какую оставить.','warn');if(remote.progress?.app==='warrior70'){if((await cloudChoiceDialog(remote))==='cloud'){applyCloudSnapshot(remote.progress);cloudKnownVersion=remote.updated_at;cloudDirty=false;cloudReady=true;cloudStatus('✓ Загружено из облака','good')}}}}catch(e){cloudStatus('Проверка облака: '+e.message,'warn')}});
 
 render()})();
 </script></body></html>
